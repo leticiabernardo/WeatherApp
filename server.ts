@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
+// TODO: rearrange the file, split api routes and server file, fix eslint warnings
 import fs from 'fs';
 import express, { Express, RequestHandler } from 'express';
 import { createServer as createViteServer } from 'vite';
@@ -7,7 +8,7 @@ import compression from 'compression';
 import { ServerResponse } from 'http';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
-import { getApi } from './src/server/routes/api';
+import { getWeatherOneCall, getSuggestions } from './src/server/routes/api';
 
 const filename = fileURLToPath(import.meta.url);
 const fileNameDIR = dirname(filename);
@@ -55,7 +56,8 @@ const createServer = async (
     app.use(requestHandler);
   }
 
-  app.use('/api', getApi);
+  app.use('/api/weathers', getWeatherOneCall);
+  app.use('/api/suggestions', getSuggestions);
 
   app.use('*', async ({ originalUrl }, res) => {
     try {
