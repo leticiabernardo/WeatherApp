@@ -7,46 +7,50 @@ const WeatherToday = (): JSX.Element => {
   const { currLocation } = useAppContext();
 
   return (
-    <>
-      <Box
-        width="100%"
-        padding="20px 0 0"
-        textAlign={{ base: 'left', sm: 'center', lg: 'left' }}
-      >
-        <Text
-          fontSize="7xl"
-          color="white"
-          fontFamily="Open Sans"
-          lineHeight="65px"
-          textShadow="1px 1px 5px rgba(0,0,0,0.3)"
-          textTransform="capitalize"
-        >
-          {currLocation
-            ? `${currLocation?.name} - ${currLocation?.state} - ${currLocation?.country}`
-            : ''}
-        </Text>
-        <Text
-          fontSize="1xl"
-          color="white"
-          fontWeight="bold"
-          fontFamily="Open Sans"
-          textShadow="1px 1px 5px rgba(0,0,0,0.3)"
-        >
-          {format(new Date(), 'HH:ii')}
-        </Text>
-        <Text
-          fontSize="sm"
-          color="white"
-          fontFamily="Open Sans"
-          textShadow="1px 1px 5px rgba(0,0,0,0.3)"
-        >
-          {`Hoje ${format(new Date(), 'dd/MM/yyyy')}`}
-        </Text>
-      </Box>
-      <Box textAlign={{ base: 'left', sm: 'center', lg: 'left' }}>
-        <WeatherTodayDetails />
-      </Box>
-    </>
+    <div>
+      {currLocation && (
+        <Box width="100%">
+          <Box
+            width="100%"
+            padding="20px 0 0"
+            textAlign={{ base: 'left', sm: 'center', lg: 'left' }}
+          >
+            <Text
+              fontSize="7xl"
+              color="white"
+              fontFamily="Open Sans"
+              lineHeight="65px"
+              textShadow="1px 1px 5px rgba(0,0,0,0.3)"
+              textTransform="capitalize"
+            >
+              {currLocation.city && `${currLocation.city} - `}
+              {currLocation.state && `${currLocation.state} - `}
+              {currLocation.country && `${currLocation.country}`}
+            </Text>
+            <Text
+              fontSize="1xl"
+              color="white"
+              fontWeight="bold"
+              fontFamily="Open Sans"
+              textShadow="1px 1px 5px rgba(0,0,0,0.3)"
+            >
+              {format(new Date(), 'HH:ii')}
+            </Text>
+            <Text
+              fontSize="sm"
+              color="white"
+              fontFamily="Open Sans"
+              textShadow="1px 1px 5px rgba(0,0,0,0.3)"
+            >
+              {`Hoje ${format(new Date(), 'dd/MM/yyyy')}`}
+            </Text>
+          </Box>
+          <Box textAlign={{ base: 'left', sm: 'center', lg: 'left' }}>
+            <WeatherTodayDetails />
+          </Box>
+        </Box>
+      )}
+    </div>
   );
 };
 

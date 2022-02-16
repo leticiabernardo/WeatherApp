@@ -3,7 +3,8 @@ import { Request, Response } from 'express';
 import { app } from 'types/types';
 
 // TODO: move the apikey to env file
-const APIKEY = '<APIKEY>';
+const APIKEY = '<apikey>';
+const APIKEYOPENCAGE = '<apikey>';
 
 export const getWeatherOneCall = (req: Request, res: Response) => {
   const { lat, lon } = req.query;
@@ -24,15 +25,15 @@ export const getWeatherOneCall = (req: Request, res: Response) => {
     .catch((error: Error) => error);
 };
 
-export const getSuggestions = (req: Request, res: Response) => {
+export const getGeocode = (req: Request, res: Response) => {
   const location = req.query.search;
   const params = {
     q: location,
-    limit: 100,
-    appid: APIKEY,
+    key: APIKEYOPENCAGE,
+    language: 'pt_BR',
   };
   return axios
-    .get<app.Suggestions[]>('http://api.openweathermap.org/geo/1.0/direct', {
+    .get<app.Geocode>('https://api.opencagedata.com/geocode/v1/json', {
       params,
     })
     .then(response => res.json(response.data).end())

@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/prefer-namespace-keyword
 export declare module app {
+  // get weather one call
   export interface Weather {
     id: number;
     main: string;
@@ -66,11 +67,28 @@ export declare module app {
     morn: number;
   }
 
-  export interface Suggestions {
-    name: string;
-    lat: number;
-    lon: number;
+  // geocode
+  export interface Geocode {
+    results: GeoCodeResult[];
+    total_results: number;
+  }
+
+  export interface GeoCodeResult {
+    components: GeoCodeResultComponents;
+    confidence: number;
+    geometry: Geometry;
+  }
+
+  export interface GeoCodeResultComponents {
     country: string;
+    country_code: string;
     state: string;
+    state_code: string;
+    city: string;
+  }
+
+  export interface Geometry {
+    lat: number;
+    lng: number;
   }
 }
