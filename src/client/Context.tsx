@@ -27,8 +27,26 @@ export const ContextWrapper = ({ children }: { children: any }) => {
     app.DailyWeatherForecast[]
   >([]);
 
-  function fetchWeathers(searchValue: string) {
-    console.log(searchValue);
+  async function fetchWeathers(searchValue: string) {
+    const responseSuggestions = await axios.get<app.Suggestions[]>(
+      '/api/suggestions',
+      {
+        params: {
+          search: searchValue,
+        },
+      }
+    );
+
+    const res = await axios.get<app.WeatherOneCallResponse>('/api/weathers', {
+      params: {
+        lat: responseSuggestions.data[0].lat,
+        lon: responseSuggestions.data[0].lon,
+      },
+    });
+
+    setCurrentLocation(responseSuggestions.data[0]);
+    setCurrWeatherForecast(res.data.current);
+    setNextWeatherForecast(res.data.daily.splice(0, 7));
   }
 
   return (
