@@ -1,11 +1,31 @@
-import * as React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
-import Main from './pages/Main';
-import { ContextWrapper } from './Context';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import Main from '@/client/pages/Main';
+import { ContextWrapper } from '@/client/Context';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/open-sans/400.css';
+
+const theme = extendTheme({
+  styles: {
+    global: () => ({
+      html: {
+        height: '100%',
+      },
+      fonts: {
+        heading: 'Open Sans',
+        body: 'Montserrat',
+      },
+      body: {
+        background: '#333',
+        width: '100%',
+        height: '100%',
+      },
+    }),
+  },
+});
 
 export const App = () => {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <ContextWrapper>
         <Main />
       </ContextWrapper>
