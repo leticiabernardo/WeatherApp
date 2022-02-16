@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import { format } from 'date-fns';
 import { useAppContext } from '@/client/Context';
+import WeatherTodayDetails from './weatherTodayDetails';
 
 const WeatherToday = (): JSX.Element => {
   const { currLocation } = useAppContext();
@@ -41,6 +42,9 @@ const WeatherToday = (): JSX.Element => {
         >
           {`Hoje ${format(new Date(), 'dd/MM/yyyy')}`}
         </Text>
+      </Box>
+      <Box textAlign={{ base: 'left', sm: 'center', lg: 'left' }}>
+        <WeatherTodayDetails />
       </Box>
     </>
   );
