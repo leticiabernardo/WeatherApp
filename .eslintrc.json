@@ -3,13 +3,20 @@
     "browser": true,
     "es2021": true
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "import"],
   "extends": [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "airbnb", //https://github.com/airbnb/javascript
     "airbnb-typescript",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
