@@ -1,18 +1,14 @@
 import axios from 'axios';
+import 'dotenv/config';
 import { Request, Response } from 'express';
 import { app } from 'types/types';
-
-// TODO: move the apikey to env file
-const APIKEY = '<apikey>';
-const APIKEYOPENCAGE = '<apikey>';
-const BINGAPIKEY = '<apikey>';
 
 export const getWeatherOneCall = (req: Request, res: Response) => {
   const { lat, lon } = req.query;
   const params = {
     lat,
     lon,
-    appid: APIKEY,
+    appid: process.env.OPENWEATHER_KEY,
     exclude: 'minutely,hourly',
     units: 'metric',
     lang: 'pt_br',
@@ -30,7 +26,7 @@ export const getGeocode = (req: Request, res: Response) => {
   const location = req.query.search;
   const params = {
     q: location,
-    key: APIKEYOPENCAGE,
+    key: process.env.OPENCAGE_KEY,
     language: 'pt_BR',
   };
   return axios
@@ -53,7 +49,7 @@ export const getBingBackgroundImage = (req: Request, res: Response) => {
       {
         params,
         headers: {
-          'Ocp-Apim-Subscription-Key': BINGAPIKEY,
+          'Ocp-Apim-Subscription-Key': process.env.BING_KEY,
         },
       }
     )
