@@ -33,6 +33,7 @@
     "serve-static": "^1.14.2",
     "styled-components": "^5.3.3",
     "ts-node": "^10.4.0",
+    "dotenv": "^16.0.0",
     "vite-plugin-svgr": "^1.0.1"
   },
   "devDependencies": {
