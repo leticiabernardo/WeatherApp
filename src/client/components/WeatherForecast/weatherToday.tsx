@@ -1,14 +1,23 @@
+import { useEffect, useState } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import { format } from 'date-fns';
 import { useAppContext } from '@/client/Context';
+import { getWeatherLocation } from '@/helpers/weather';
 import WeatherTodayDetails from './weatherTodayDetails';
 
 const WeatherToday = (): JSX.Element => {
+  const [location, setLocation] = useState<string | undefined>(undefined);
   const { currLocation } = useAppContext();
+
+  useEffect(() => {
+    if (currLocation) {
+      setLocation(getWeatherLocation(currLocation, 'long'));
+    }
+  }, [currLocation]);
 
   return (
     <div>
-      {currLocation && (
+      {location && (
         <Box width="100%">
           <Box
             width="100%"
@@ -21,11 +30,8 @@ const WeatherToday = (): JSX.Element => {
               fontFamily="Open Sans"
               lineHeight="65px"
               textShadow="1px 1px 5px rgba(0,0,0,0.3)"
-              textTransform="capitalize"
             >
-              {currLocation.city && `${currLocation.city} - `}
-              {currLocation.state && `${currLocation.state} - `}
-              {currLocation.country && `${currLocation.country}`}
+              {location}
             </Text>
             <Text
               fontSize="1xl"

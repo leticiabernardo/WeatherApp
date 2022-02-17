@@ -9,7 +9,7 @@ const WeatherTodayDetails = (): JSX.Element => {
 
   return (
     <Box
-      margin={{ base: '90px auto', sm: '10px auto', lg: '90px auto' }}
+      margin={{ base: '60px auto', sm: '10px auto', lg: '60px auto' }}
       display="grid"
       gridTemplateColumns={{
         base: '1fr 1fr 1fr',

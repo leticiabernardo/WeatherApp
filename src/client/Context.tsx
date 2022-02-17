@@ -1,10 +1,13 @@
 import axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { app } from 'types/types';
+import { getRandomLargestImage } from '@/helpers/image-analizer';
+import { getWeatherLocation } from '@/helpers/weather';
 
 export interface Context {
   search: string;
   currLocation: app.GeoCodeResultComponents | undefined;
+  backgroundImage: string | undefined;
   setSearch: (val: string) => void;
   currWeatherForecast?: app.CurrentWeatherForecast;
   nextWeatherForecast: app.DailyWeatherForecast[];
@@ -23,6 +26,9 @@ export const ContextWrapper = ({ children }: { children: any }) => {
   const [currWeatherForecast, setCurrWeatherForecast] = useState<
     app.CurrentWeatherForecast | undefined
   >(undefined);
+  const [backgroundImage, setBackgroundImage] = useState<string | undefined>(
+    undefined
+  );
   const [nextWeatherForecast, setNextWeatherForecast] = useState<
     app.DailyWeatherForecast[]
   >([]);
@@ -40,11 +46,22 @@ export const ContextWrapper = ({ children }: { children: any }) => {
         lon: responseGeoCode.data.results[0].geometry.lng,
       },
     });
+    const resImage = await axios.get<app.BingBackgroundImage>(
+      '/api/bingbackground',
+      {
+        params: {
+          search: getWeatherLocation(
+            responseGeoCode.data.results[0].components
+          ),
+        },
+      }
+    );
 
     // TODO: display geocode results with an auto complete field
     setCurrentLocation(responseGeoCode.data.results[0].components);
     setCurrWeatherForecast(res.data.current);
     setNextWeatherForecast(res.data.daily.splice(0, 7));
+    setBackgroundImage(getRandomLargestImage(resImage.data.value));
   }
 
   return (
@@ -53,9 +70,10 @@ export const ContextWrapper = ({ children }: { children: any }) => {
         currWeatherForecast,
         nextWeatherForecast,
         search,
+        currLocation,
+        backgroundImage,
         fetchWeathers,
         setSearch,
-        currLocation,
       }}
     >
       {children}
