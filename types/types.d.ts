@@ -84,11 +84,27 @@ export declare module app {
     country_code: string;
     state: string;
     state_code: string;
-    city: string;
+    city?: string;
+    town?: string;
   }
 
   export interface Geometry {
     lat: number;
     lng: number;
+  }
+
+  // bing image background
+  export interface BingBackgroundImage {
+    totalEstimatedMatches: number;
+    nextOffset: number;
+    currentOffset: number;
+    value: BingImage[];
+  }
+
+  export interface BingImage {
+    contentUrl: string;
+    encodingFormat: string;
+    width: number;
+    height: number;
   }
 }
