@@ -1,4 +1,4 @@
-import { useDynamicSVGImport } from '@/client/hooks/assyncSVG';
+import { useDynamicSVGImport } from '@/client/hooks/asyncSVG';
 
 type AsyncSvgIconProps = {
   svg: string;

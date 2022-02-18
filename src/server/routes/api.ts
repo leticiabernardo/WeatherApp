@@ -49,7 +49,7 @@ export const getBingBackgroundImage = (req: Request, res: Response) => {
       {
         params,
         headers: {
-          'Ocp-Apim-Subscription-Key': process.env.BING_KEY,
+          'Ocp-Apim-Subscription-Key': process.env.BING_KEY || '',
         },
       }
     )
