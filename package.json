@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "description": "Weather forecasts",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev:server": "nodemon --watch server.ts --watch src/server/**/* --exec 'yarn node --experimental-specifier-resolution=node --loader ts-node/esm/transpile-only server.ts'",
     "dev:client": "vite --config vite.config.ts dev",

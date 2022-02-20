@@ -3,6 +3,7 @@ import WeatherToday from '@/client/components/WeatherForecast/weatherToday';
 import WeatherNextDays from '@/client/components/WeatherForecast/weatherNextDays';
 import Header from '@/client/components/Header';
 import { useAppContext } from '@/client/Context';
+import LocationGif from '@/assets/images/location.gif';
 
 const Main = () => {
   const { currWeatherForecast, backgroundImage } = useAppContext();
@@ -65,7 +66,7 @@ const Main = () => {
             borderRadius="20px"
           >
             <Box>
-              <img src="/src/assets/images/location.gif" width="140" alt="" />
+              <img src={LocationGif} width="140" alt="" />
             </Box>
             <Text
               color="#fff"

@@ -1,14 +1,10 @@
-import { app } from 'types/types';
-
 const minWidth = 1200;
 const minHeight = 1000;
 
 function getTopLargestImages(items: app.BingImage[]): string | undefined {
   let largestImage;
-  const largestWidth = minWidth;
-  const largestHeight = minHeight;
   for (let i = 0; i < items.length; i += 1) {
-    if (items[i].width > largestWidth && items[i].height > largestHeight) {
+    if (items[i].width > minWidth && items[i].height > minHeight) {
       largestImage = items[i].contentUrl;
     }
   }

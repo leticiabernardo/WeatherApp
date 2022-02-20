@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useContext, useState } from 'react';
-import { app } from 'types/types';
 import { getRandomLargestImage } from '@/helpers/image-analizer';
 import { getWeatherLocation } from '@/helpers/weather';
 

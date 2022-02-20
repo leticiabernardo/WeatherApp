@@ -14,8 +14,10 @@ import {
   getBingBackgroundImage,
 } from './src/server/routes/api';
 
-const filename = fileURLToPath(import.meta.url);
-const fileNameDIR = dirname(filename);
+const filename = require('url')
+  .pathToFileURL(__filename)
+  .toString() as unknown as string;
+const fileNameDIR = dirname(fileURLToPath(filename));
 
 const isTest = process.env.NODE_ENV === 'test' || !!process.env.VITE_TEST_BUILD;
 

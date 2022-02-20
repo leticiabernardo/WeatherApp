@@ -1,5 +1,3 @@
-import { app } from 'types/types';
-
 export function getCityOrTown(
   location: app.GeoCodeResultComponents
 ): string | undefined {

@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/prefer-namespace-keyword
-export declare module app {
+declare module app {
   // get weather one call
   export interface Weather {
     id: number;
@@ -107,4 +107,9 @@ export declare module app {
     width: number;
     height: number;
   }
+}
+
+declare module '*.gif' {
+  const content: string;
+  export default content;
 }

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import 'dotenv/config';
 import { Request, Response } from 'express';
-import { app } from 'types/types';
 
 export const getWeatherOneCall = (req: Request, res: Response) => {
   const { lat, lon } = req.query;
