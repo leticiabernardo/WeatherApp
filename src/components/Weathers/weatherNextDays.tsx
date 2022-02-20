@@ -1,12 +1,12 @@
 import { Box, Text } from '@chakra-ui/react';
+import { getFullTemperature } from '@/helpers/temperature';
 import { getWeekday } from '@/helpers/weekday';
-import { convertFloatToIntWithRounding } from '@/helpers/number-converter';
 import { getWeatherName } from '@/helpers/weather';
 import { useAppContext } from '@/context/Context';
 import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 
 const WeatherNextDays = () => {
-  const { nextWeathers } = useAppContext();
+  const { nextWeathers, temperatureMetric } = useAppContext();
 
   return (
     <Box
@@ -57,10 +57,16 @@ const WeatherNextDays = () => {
               textAlign="center"
             >
               <Text>
-                {`Max: ${convertFloatToIntWithRounding(weatherDay.temp.max)}°C`}
+                {`Max: ${getFullTemperature(
+                  weatherDay.temp.max,
+                  temperatureMetric
+                )}`}
               </Text>
               <Text>
-                {`Min: ${convertFloatToIntWithRounding(weatherDay.temp.min)}°C`}
+                {`Min: ${getFullTemperature(
+                  weatherDay.temp.min,
+                  temperatureMetric
+                )}`}
               </Text>
             </Text>
           </Box>

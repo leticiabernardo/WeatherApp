@@ -1,11 +1,11 @@
 import { Box, Text } from '@chakra-ui/react';
 import { useAppContext } from '@/context/Context';
-import { convertFloatToIntWithRounding } from '@/helpers/number-converter';
+import { getFullTemperature } from '@/helpers/temperature';
 import { getWeatherName } from '@/helpers/weather';
 import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 
 const WeatherTodayDetails = (): JSX.Element => {
-  const { currentWeather } = useAppContext();
+  const { currentWeather, temperatureMetric } = useAppContext();
 
   return (
     <Box
@@ -28,7 +28,7 @@ const WeatherTodayDetails = (): JSX.Element => {
           textAlign="center"
           textShadow="1px 1px 5px rgba(0,0,0,0.3)"
         >
-          {convertFloatToIntWithRounding(currentWeather.temperature)} °C
+          {getFullTemperature(currentWeather.temperature, temperatureMetric)}
         </Box>
       )}
       <Box textAlign="center" margin="0 auto">

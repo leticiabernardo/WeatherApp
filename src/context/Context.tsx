@@ -4,14 +4,16 @@ import { getWeatherLocation } from '@/helpers/weather';
 
 export interface Context {
   backgroundImage: string | undefined;
-  location: app.GeoCodeComponents | undefined;
   currentWeather?: app.CurrentWeather;
-  search: string;
-  nextWeathers: app.DailyWeathers[];
-  fetchWeathers: (search: string) => void;
-  setSearch: (val: string) => void;
   error: string | undefined;
+  location: app.GeoCodeComponents | undefined;
+  nextWeathers: app.DailyWeathers[];
+  search: string;
+  temperatureMetric: string;
+  fetchWeathers: (search: string) => void;
   setError: (e: string | undefined) => void;
+  setSearch: (val: string) => void;
+  setTemperatureMetric: (metric: string) => void;
 }
 
 const context = React.createContext({} as Context);
@@ -30,7 +32,8 @@ export const ContextWrapper = ({ children }: { children: any }) => {
     undefined
   );
   const [nextWeathers, setNextWeathers] = useState<app.DailyWeathers[]>([]);
-  const [error, setError] = useState('');
+  const [error, setError] = useState<string | undefined>(undefined);
+  const [temperatureMetric, setTemperatureMetric] = useState<string>('celsius');
 
   async function fetchWeathers(searchValue: string) {
     const responseGeoCode = await axios.get<app.Geocode>('/api/geocode', {
@@ -61,15 +64,17 @@ export const ContextWrapper = ({ children }: { children: any }) => {
   return (
     <Provider
       value={{
+        backgroundImage,
         currentWeather,
+        error,
+        location,
         nextWeathers,
         search,
-        location,
-        backgroundImage,
-        error,
+        temperatureMetric,
         fetchWeathers,
-        setSearch,
         setError,
+        setSearch,
+        setTemperatureMetric,
       }}
     >
       {children}
