@@ -5,7 +5,7 @@
   "description": "Weather forecasts",
   "type": "commonjs",
   "scripts": {
-    "dev:server": "nodemon --watch server.ts --watch src/server/**/* --exec 'yarn node --experimental-specifier-resolution=node --loader ts-node/esm/transpile-only server.ts'",
+    "dev:server": "nodemon --watch server.ts --watch src/services/**/* --exec 'yarn node --experimental-specifier-resolution=node --loader ts-node/esm/transpile-only server.ts'",
     "dev:client": "vite --config vite.config.ts dev",
     "build": "tsc -p tsconfig.prod.json && yarn build:client && yarn build:server",
     "build:client": "vite build --outDir dist/client",

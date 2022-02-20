@@ -46,7 +46,7 @@ export const ContextWrapper = ({ children }: { children: any }) => {
       },
     });
     const resImage = await axios.get<app.BingBackgroundImage>(
-      '/api/bingbackground',
+      '/api/background',
       {
         params: {
           search: getWeatherLocation(

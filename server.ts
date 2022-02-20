@@ -8,11 +8,7 @@ import compression from 'compression';
 import { ServerResponse } from 'http';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
-import {
-  getWeatherOneCall,
-  getGeocode,
-  getBingBackgroundImage,
-} from './src/server/routes/api';
+import api from './src/api';
 
 const filename = require('url')
   .pathToFileURL(__filename)
@@ -62,9 +58,7 @@ const createServer = async (
     app.use(requestHandler);
   }
 
-  app.use('/api/weathers', getWeatherOneCall);
-  app.use('/api/geocode', getGeocode);
-  app.use('/api/bingbackground', getBingBackgroundImage);
+  app.use('/api', api);
 
   app.use('*', async ({ originalUrl }, res) => {
     try {
