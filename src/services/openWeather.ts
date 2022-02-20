@@ -1,6 +1,7 @@
 import axios from 'axios';
 import 'dotenv/config';
 import { Request, Response } from 'express';
+import { transformWeathers } from './transforms/weathers';
 
 export const getWeathers = (req: Request, res: Response) => {
   const { lat, lon } = req.query;
@@ -17,6 +18,6 @@ export const getWeathers = (req: Request, res: Response) => {
       'https://api.openweathermap.org/data/2.5/onecall',
       { params }
     )
-    .then(response => res.json(response.data).end())
+    .then(response => res.json(transformWeathers(response.data)).end())
     .catch((error: Error) => error);
 };

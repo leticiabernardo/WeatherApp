@@ -1,6 +1,7 @@
 import axios from 'axios';
 import 'dotenv/config';
 import { Request, Response } from 'express';
+import { transformBackground } from './transforms/background';
 
 export const getBackground = (req: Request, res: Response) => {
   const place = req.query.search;
@@ -18,6 +19,6 @@ export const getBackground = (req: Request, res: Response) => {
         },
       }
     )
-    .then(response => res.json(response.data).end())
+    .then(response => res.json(transformBackground(response.data)).end())
     .catch((error: Error) => error);
 };

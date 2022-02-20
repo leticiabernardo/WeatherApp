@@ -6,7 +6,7 @@ import { useAppContext } from '@/context/Context';
 import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 
 const WeatherNextDays = () => {
-  const { nextWeatherForecast } = useAppContext();
+  const { nextWeathers } = useAppContext();
 
   return (
     <Box
@@ -23,7 +23,7 @@ const WeatherNextDays = () => {
       justifyContent="center"
       borderTop="1px solid white"
     >
-      {nextWeatherForecast.map(weatherDay => {
+      {nextWeathers.map(weatherDay => {
         return (
           <Box
             margin="5px 0"
@@ -34,7 +34,7 @@ const WeatherNextDays = () => {
             key={weatherDay.dt}
           >
             <Text fontWeight="bold" textShadow="1px 1px 5px rgba(0,0,0,0.3)">
-              {getWeekday(weatherDay.dt * 1000)}
+              {weatherDay.dt ? getWeekday(weatherDay.dt * 1000) : ''}
             </Text>
 
             <Box
@@ -44,10 +44,10 @@ const WeatherNextDays = () => {
               alignItems="center"
             >
               <AsyncSvgIcon
-                svg={`weather-${weatherDay.weather[0].main.toLocaleLowerCase()}`}
+                svg={`weather-${weatherDay.weather.toLocaleLowerCase()}`}
               />
               <Text marginTop="8px" textShadow="1px 1px 5px rgba(0,0,0,0.3)">
-                {getWeatherName(weatherDay.weather[0].main)}
+                {getWeatherName(weatherDay.weather)}
               </Text>
             </Box>
 

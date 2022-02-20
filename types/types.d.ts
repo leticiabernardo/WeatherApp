@@ -9,62 +9,53 @@ declare module app {
   }
 
   export interface CurrentWeatherForecast {
-    dt: number;
-    sunrise: number;
-    sunset: number;
-    temp: number;
-    feels_like: number;
+    dt?: number;
+    temp?: number;
     pressure: number;
     humidity: number;
-    dew_point: number;
-    uvi: number;
-    clouds: number;
-    visibility: number;
     wind_speed: number;
-    wind_deg: number;
     weather: Weather[];
   }
 
   export interface DailyWeatherForecast {
     dt: number;
-    sunrise: number;
-    sunset: number;
-    moonrise: number;
-    moonset: number;
-    moon_phase: number;
-    temp: Temp;
-    feels_like: FeelsLike;
+    temp: Temperature;
     pressure: number;
     humidity: number;
-    dew_point: number;
     wind_speed: number;
-    wind_deg: number;
-    wind_gust: number;
     weather: Weather[];
-    clouds: number;
-    pop: number;
-    uvi: number;
   }
-
   export interface WeatherOneCallResponse {
     current: CurrentWeatherForecast;
     daily: DailyWeatherForecast[];
   }
 
-  export interface Temp {
-    day: number;
-    min: number;
-    max: number;
-    night: number;
-    eve: number;
-    morn: number;
+  export interface WeatherResponse {
+    current: CurrentWeather;
+    daily: DailyWeathers[];
   }
 
-  export interface FeelsLike {
-    day: number;
-    night: number;
-    eve: number;
-    morn: number;
+  export interface Temperature {
+    min: number;
+    max: number;
+  }
+
+  export interface CurrentWeather {
+    dt?: number;
+    temperature?: number;
+    pressure?: number;
+    humidity?: number;
+    wind_speed?: number;
+    weather: string;
+  }
+
+  export interface DailyWeathers {
+    dt?: number;
+    temp: Temperature;
+    pressure?: number;
+    humidity?: number;
+    wind_speed?: number;
+    weather: string;
   }
 
   // geocode
@@ -74,12 +65,12 @@ declare module app {
   }
 
   export interface GeoCodeResult {
-    components: GeoCodeResultComponents;
+    components: GeoCodeComponents;
     confidence: number;
     geometry: Geometry;
   }
 
-  export interface GeoCodeResultComponents {
+  export interface GeoCodeComponents {
     country: string;
     country_code: string;
     state: string;
@@ -95,17 +86,17 @@ declare module app {
 
   // bing image background
   export interface BingBackgroundImage {
-    totalEstimatedMatches: number;
-    nextOffset: number;
-    currentOffset: number;
     value: BingImage[];
   }
 
   export interface BingImage {
     contentUrl: string;
-    encodingFormat: string;
     width: number;
     height: number;
+  }
+
+  export interface Background {
+    background?: string;
   }
 }
 

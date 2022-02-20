@@ -1,5 +1,5 @@
 export function getCityOrTown(
-  location: app.GeoCodeResultComponents
+  location: app.GeoCodeComponents
 ): string | undefined {
   if (location?.city) return location.city;
   if (location?.town) return location.town;
@@ -44,7 +44,7 @@ export function getWeatherName(name: string) {
 }
 
 export function getWeatherLocation(
-  searchLocation: app.GeoCodeResultComponents,
+  searchLocation: app.GeoCodeComponents,
   type = 'short'
 ): string | undefined {
   const state = searchLocation?.state;

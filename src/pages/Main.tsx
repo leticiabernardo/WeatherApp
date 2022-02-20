@@ -6,7 +6,7 @@ import { useAppContext } from '@/context/Context';
 import LocationGif from '@/assets/images/location.gif';
 
 const Main = () => {
-  const { currWeatherForecast, backgroundImage } = useAppContext();
+  const { currentWeather, backgroundImage } = useAppContext();
 
   return (
     <Container
@@ -41,7 +41,7 @@ const Main = () => {
         position="relative"
       >
         <Header />
-        {currWeatherForecast ? (
+        {currentWeather ? (
           <Box
             display="flex"
             alignItems="center"
