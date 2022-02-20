@@ -2,8 +2,8 @@ import { Box, Text } from '@chakra-ui/react';
 import { getWeekday } from '@/helpers/weekday';
 import { convertFloatToIntWithRounding } from '@/helpers/number-converter';
 import { getWeatherName } from '@/helpers/weather';
-import { useAppContext } from '@/client/Context';
-import AsyncSvgIcon from '@/client/components/AsyncSvgIcon';
+import { useAppContext } from '@/context/Context';
+import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 
 const WeatherNextDays = () => {
   const { nextWeatherForecast } = useAppContext();

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import { format } from 'date-fns';
-import { useAppContext } from '@/client/Context';
+import { useAppContext } from '@/context/Context';
 import { getWeatherLocation } from '@/helpers/weather';
 import WeatherTodayDetails from './weatherTodayDetails';
 

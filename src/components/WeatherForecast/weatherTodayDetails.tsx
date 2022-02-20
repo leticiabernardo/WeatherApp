@@ -1,8 +1,8 @@
 import { Box, Text } from '@chakra-ui/react';
-import { useAppContext } from '@/client/Context';
+import { useAppContext } from '@/context/Context';
 import { convertFloatToIntWithRounding } from '@/helpers/number-converter';
 import { getWeatherName } from '@/helpers/weather';
-import AsyncSvgIcon from '@/client/components/AsyncSvgIcon';
+import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 
 const WeatherTodayDetails = (): JSX.Element => {
   const { currWeatherForecast } = useAppContext();

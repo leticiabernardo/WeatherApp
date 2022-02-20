@@ -1,8 +1,8 @@
 import { Container, Text, Box } from '@chakra-ui/react';
-import WeatherToday from '@/client/components/WeatherForecast/weatherToday';
-import WeatherNextDays from '@/client/components/WeatherForecast/weatherNextDays';
-import Header from '@/client/components/Header';
-import { useAppContext } from '@/client/Context';
+import WeatherToday from '@/components/WeatherForecast/weatherToday';
+import WeatherNextDays from '@/components/WeatherForecast/weatherNextDays';
+import Header from '@/components/Header';
+import { useAppContext } from '@/context/Context';
 import LocationGif from '@/assets/images/location.gif';
 
 const Main = () => {

@@ -1,7 +1,7 @@
 import { Box, Link } from '@chakra-ui/react';
-import LanguageSwitcher from '@/client/components/LanguageSwitcher';
-import TemperatureConverter from '@/client/components/TemperatureConverter';
-import Search from '@/client/components/Search';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import TemperatureConverter from '@/components/TemperatureConverter';
+import Search from '@/components/Search';
 
 const Header = () => {
   return (

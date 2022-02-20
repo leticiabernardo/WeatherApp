@@ -6,7 +6,7 @@ import {
   InputRightElement,
   Button,
 } from '@chakra-ui/react';
-import { useAppContext } from '@/client/Context';
+import { useAppContext } from '@/context/Context';
 import { ReactComponent as IconSearch } from '@/assets/images/icon-search.svg';
 import { ReactComponent as IconGeolocation } from '@/assets/images/icon-map.svg';
 

@@ -1,6 +1,6 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import Main from '@/client/pages/Main';
-import { ContextWrapper } from '@/client/Context';
+import Main from '@/pages/Main';
+import { ContextWrapper } from '@/context/Context';
 import '@fontsource/montserrat/700.css';
 import '@fontsource/open-sans/400.css';
 

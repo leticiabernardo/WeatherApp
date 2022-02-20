@@ -23,7 +23,7 @@ export function useDynamicSVGImport(
       try {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access
         ImportedIconRef.current = (
-          await import(`../../assets/images/${name}.svg`)
+          await import(`../assets/images/${name}.svg`)
         ).ReactComponent;
         onCompleted?.(name, ImportedIconRef.current);
       } catch (e) {
