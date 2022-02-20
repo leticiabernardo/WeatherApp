@@ -70,8 +70,7 @@ const createServer = async (
         // always read fresh template in dev
         template = fs.readFileSync(localResolve('index.html'), 'utf-8');
         template = await vite.transformIndexHtml(url, template);
-        render = (await vite.ssrLoadModule('/src/client/entry-server.tsx'))
-          .render;
+        render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render;
       } else {
         template = indexProd;
         const entryServer = require('./server/entry-server.js');
