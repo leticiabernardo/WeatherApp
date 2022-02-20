@@ -4,12 +4,14 @@ import { getWeatherLocation } from '@/helpers/weather';
 
 export interface Context {
   backgroundImage: string | undefined;
-  currLocation: app.GeoCodeComponents | undefined;
+  location: app.GeoCodeComponents | undefined;
   currentWeather?: app.CurrentWeather;
   search: string;
   nextWeathers: app.DailyWeathers[];
   fetchWeathers: (search: string) => void;
   setSearch: (val: string) => void;
+  error: string | undefined;
+  setError: (e: string | undefined) => void;
 }
 
 const context = React.createContext({} as Context);
@@ -18,9 +20,9 @@ const { Provider } = context;
 
 export const ContextWrapper = ({ children }: { children: any }) => {
   const [search, setSearch] = useState('');
-  const [currLocation, setCurrentLocation] = useState<
-    app.GeoCodeComponents | undefined
-  >(undefined);
+  const [location, setLocation] = useState<app.GeoCodeComponents | undefined>(
+    undefined
+  );
   const [currentWeather, setCurrentWeather] = useState<
     app.CurrentWeather | undefined
   >(undefined);
@@ -28,6 +30,7 @@ export const ContextWrapper = ({ children }: { children: any }) => {
     undefined
   );
   const [nextWeathers, setNextWeathers] = useState<app.DailyWeathers[]>([]);
+  const [error, setError] = useState('');
 
   async function fetchWeathers(searchValue: string) {
     const responseGeoCode = await axios.get<app.Geocode>('/api/geocode', {
@@ -49,7 +52,7 @@ export const ContextWrapper = ({ children }: { children: any }) => {
     });
 
     // TODO: display geocode results with an auto complete field
-    setCurrentLocation(responseGeoCode.data.results[0].components);
+    setLocation(responseGeoCode.data.results[0].components);
     setCurrentWeather(res.data.current);
     setNextWeathers(res.data.daily);
     setBackgroundImage(resImage.data.background);
@@ -61,10 +64,12 @@ export const ContextWrapper = ({ children }: { children: any }) => {
         currentWeather,
         nextWeathers,
         search,
-        currLocation,
+        location,
         backgroundImage,
+        error,
         fetchWeathers,
         setSearch,
+        setError,
       }}
     >
       {children}

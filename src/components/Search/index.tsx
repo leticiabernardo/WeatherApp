@@ -13,14 +13,31 @@ import { ReactComponent as IconGeolocation } from '@/assets/images/icon-map.svg'
 interface Props {
   fetchWeathers: (search: string) => void;
   setSearch: (search: string) => void;
+  setError: (e: string) => void;
 }
 
-const Search = ({ fetchWeathers, setSearch }: Props): JSX.Element => {
+const Search = ({ fetchWeathers, setSearch, setError }: Props): JSX.Element => {
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchClick = () => {
     fetchWeathers(searchValue);
     setSearch(searchValue);
+  };
+
+  const handleGeolocationClick = () => {
+    if (!('geolocation' in navigator)) {
+      setError('Geolocation is not supported by your browser');
+    }
+    navigator.geolocation.getCurrentPosition(function (position): void {
+      if (position?.coords?.latitude && position?.coords?.longitude) {
+        const coords = [
+          position.coords.latitude,
+          position.coords.longitude,
+        ].join(',');
+        fetchWeathers(coords);
+        setSearch(coords);
+      }
+    });
   };
 
   return (
@@ -33,6 +50,7 @@ const Search = ({ fetchWeathers, setSearch }: Props): JSX.Element => {
             variant="link"
             color="white"
             _focus={{ outline: 'none' }}
+            onClick={handleGeolocationClick}
           >
             <IconGeolocation fill="white" width="20px" height="20px" />
           </Button>
@@ -77,9 +95,15 @@ const MemoizedSearch = memo(Search, () => {
 });
 
 const SearchWrapper = (): JSX.Element => {
-  const { fetchWeathers, setSearch } = useAppContext();
+  const { fetchWeathers, setSearch, setError } = useAppContext();
 
-  return <MemoizedSearch fetchWeathers={fetchWeathers} setSearch={setSearch} />;
+  return (
+    <MemoizedSearch
+      fetchWeathers={fetchWeathers}
+      setSearch={setSearch}
+      setError={setError}
+    />
+  );
 };
 
 export default SearchWrapper;

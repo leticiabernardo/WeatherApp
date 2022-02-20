@@ -7,7 +7,7 @@ import WeatherTodayDetails from './weatherTodayDetails';
 
 const WeatherToday = (): JSX.Element => {
   const [location, setLocation] = useState<string | undefined>(undefined);
-  const { currLocation } = useAppContext();
+  const { location: currLocation } = useAppContext();
 
   useEffect(() => {
     if (currLocation) {
