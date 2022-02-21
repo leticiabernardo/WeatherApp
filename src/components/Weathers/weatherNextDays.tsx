@@ -6,7 +6,7 @@ import { useAppContext } from '@/context/Context';
 import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 
 const WeatherNextDays = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { nextWeathers, temperatureMetric } = useAppContext();
 
   return (
@@ -32,10 +32,16 @@ const WeatherNextDays = () => {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            key={weatherDay.dt}
+            key={weatherDay.date}
           >
-            <Text fontWeight="bold" textShadow="1px 1px 5px rgba(0,0,0,0.3)">
-              {weatherDay.dt ? getWeekday(weatherDay.dt * 1000) : ''}
+            <Text
+              fontWeight="bold"
+              textShadow="1px 1px 5px rgba(0,0,0,0.3)"
+              textTransform="capitalize"
+            >
+              {weatherDay.date
+                ? getWeekday(weatherDay.date * 1000, i18n.language)
+                : ''}
             </Text>
 
             <Box

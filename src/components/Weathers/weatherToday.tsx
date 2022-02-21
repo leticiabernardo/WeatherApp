@@ -5,9 +5,10 @@ import { useAppContext } from '@/context/Context';
 import { getWeatherLocation } from '@/helpers/weather';
 import { useTranslation } from 'react-i18next';
 import WeatherTodayDetails from './weatherTodayDetails';
+import { getDate } from '@/helpers/weekday';
 
 const WeatherToday = (): JSX.Element => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [location, setLocation] = useState<string | undefined>(undefined);
   const { location: currLocation } = useAppContext();
 
@@ -51,7 +52,7 @@ const WeatherToday = (): JSX.Element => {
               textShadow="1px 1px 5px rgba(0,0,0,0.3)"
             >
               {t('Today {{date}}', {
-                date: format(new Date(), 'dd/MM/yyyy'),
+                date: getDate(new Date(), i18n.language),
                 interpolation: { escapeValue: false },
               })}
             </Text>

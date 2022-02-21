@@ -58,21 +58,21 @@ declare module app {
     | 'Tornado';
 
   export interface CurrentWeather {
-    dt?: number;
-    temperature?: number;
+    date?: number;
     pressure?: number;
     humidity?: number;
     wind_speed?: number;
     weather: WeatherName;
+    temperature?: number;
   }
 
   export interface DailyWeathers {
-    dt?: number;
-    temp: Temperature;
+    date?: number;
     pressure?: number;
     humidity?: number;
     wind_speed?: number;
     weather: WeatherName;
+    temp: Temperature;
   }
 
   // geocode

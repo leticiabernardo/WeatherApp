@@ -15,6 +15,7 @@ const mountCurrentWeather = (
     wind_speed: curr.wind_speed || undefined,
     humidity: curr.humidity || undefined,
     pressure: curr.pressure || undefined,
+    date: curr.dt || undefined,
   };
   if (curr.temp) weather.temperature = curr.temp || 0;
 
