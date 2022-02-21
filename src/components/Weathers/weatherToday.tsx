@@ -4,8 +4,8 @@ import { format } from 'date-fns';
 import { useAppContext } from '@/context/Context';
 import { getWeatherLocation } from '@/helpers/weather';
 import { useTranslation } from 'react-i18next';
-import WeatherTodayDetails from './weatherTodayDetails';
 import { getDate } from '@/helpers/weekday';
+import WeatherTodayDetails from './weatherTodayDetails';
 
 const WeatherToday = (): JSX.Element => {
   const { t, i18n } = useTranslation();
