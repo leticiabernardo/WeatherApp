@@ -1,10 +1,10 @@
 const MAX_WEEK_DAYS = 7;
 
-const getWeatherMain = (curr: app.CurrentWeatherForecast): string => {
+const getWeatherMain = (curr: app.CurrentWeatherForecast): app.WeatherName => {
   if (Array.isArray(curr.weather) && curr.weather.length > 0) {
-    return curr.weather[0].main || '';
+    return curr.weather[0].main;
   }
-  return '';
+  return 'Clear';
 };
 
 const mountCurrentWeather = (

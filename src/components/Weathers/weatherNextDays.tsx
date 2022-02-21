@@ -1,11 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import { Box, Text } from '@chakra-ui/react';
 import { getFullTemperature } from '@/helpers/temperature';
 import { getWeekday } from '@/helpers/weekday';
-import { getWeatherName } from '@/helpers/weather';
 import { useAppContext } from '@/context/Context';
 import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 
 const WeatherNextDays = () => {
+  const { t } = useTranslation();
   const { nextWeathers, temperatureMetric } = useAppContext();
 
   return (
@@ -47,7 +48,7 @@ const WeatherNextDays = () => {
                 svg={`weather-${weatherDay.weather.toLocaleLowerCase()}`}
               />
               <Text marginTop="8px" textShadow="1px 1px 5px rgba(0,0,0,0.3)">
-                {getWeatherName(weatherDay.weather)}
+                {weatherDay && t(weatherDay.weather)}
               </Text>
             </Box>
 
@@ -57,16 +58,22 @@ const WeatherNextDays = () => {
               textAlign="center"
             >
               <Text>
-                {`Max: ${getFullTemperature(
-                  weatherDay.temp.max,
-                  temperatureMetric
-                )}`}
+                {t('Max: {{max}}', {
+                  max: getFullTemperature(
+                    weatherDay.temp.max,
+                    temperatureMetric
+                  ),
+                  interpolation: { escapeValue: false },
+                })}
               </Text>
               <Text>
-                {`Min: ${getFullTemperature(
-                  weatherDay.temp.min,
-                  temperatureMetric
-                )}`}
+                {t('Min: {{min}}', {
+                  min: getFullTemperature(
+                    weatherDay.temp.min,
+                    temperatureMetric
+                  ),
+                  interpolation: { escapeValue: false },
+                })}
               </Text>
             </Text>
           </Box>

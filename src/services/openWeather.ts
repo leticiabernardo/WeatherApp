@@ -4,14 +4,14 @@ import { Request, Response } from 'express';
 import { transformWeathers } from './transforms/weathers';
 
 export const getWeathers = (req: Request, res: Response) => {
-  const { lat, lon } = req.query;
+  const { lat, lon, lang } = req.query;
   const params = {
     lat,
     lon,
     appid: process.env.OPENWEATHER_KEY,
     exclude: 'minutely,hourly',
     units: 'metric',
-    lang: 'pt_br',
+    lang,
   };
   return axios
     .get<app.WeatherOneCallResponse>(

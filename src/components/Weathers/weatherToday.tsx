@@ -3,9 +3,11 @@ import { Box, Text } from '@chakra-ui/react';
 import { format } from 'date-fns';
 import { useAppContext } from '@/context/Context';
 import { getWeatherLocation } from '@/helpers/weather';
+import { useTranslation } from 'react-i18next';
 import WeatherTodayDetails from './weatherTodayDetails';
 
 const WeatherToday = (): JSX.Element => {
+  const { t } = useTranslation();
   const [location, setLocation] = useState<string | undefined>(undefined);
   const { location: currLocation } = useAppContext();
 
@@ -48,7 +50,10 @@ const WeatherToday = (): JSX.Element => {
               fontFamily="Open Sans"
               textShadow="1px 1px 5px rgba(0,0,0,0.3)"
             >
-              {`Hoje ${format(new Date(), 'dd/MM/yyyy')}`}
+              {t('Today {{date}}', {
+                date: format(new Date(), 'dd/MM/yyyy'),
+                interpolation: { escapeValue: false },
+              })}
             </Text>
           </Box>
           <Box textAlign={{ base: 'left', sm: 'center', lg: 'left' }}>

@@ -3,7 +3,7 @@ declare module app {
   // get weather one call
   export interface Weather {
     id: number;
-    main: string;
+    main: WeatherName;
     description: string;
     icon: string;
   }
@@ -40,13 +40,30 @@ declare module app {
     max: number;
   }
 
+  type WeatherName =
+    | 'Clear'
+    | 'Clouds'
+    | 'Thunderstorm'
+    | 'Drizzle'
+    | 'Rain'
+    | 'Snow'
+    | 'Mist'
+    | 'Smoke'
+    | 'Haze'
+    | 'Dust'
+    | 'Fog'
+    | 'Sand'
+    | 'Ash'
+    | 'Squall'
+    | 'Tornado';
+
   export interface CurrentWeather {
     dt?: number;
     temperature?: number;
     pressure?: number;
     humidity?: number;
     wind_speed?: number;
-    weather: string;
+    weather: WeatherName;
   }
 
   export interface DailyWeathers {
@@ -55,7 +72,7 @@ declare module app {
     pressure?: number;
     humidity?: number;
     wind_speed?: number;
-    weather: string;
+    weather: WeatherName;
   }
 
   // geocode

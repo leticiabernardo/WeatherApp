@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import axios from 'axios';
-import React, { useContext, useState } from 'react';
+import React, { ReactNode, useContext, useEffect, useState } from 'react';
 import { getWeatherLocation } from '@/helpers/weather';
+import { useTranslation } from 'react-i18next';
 
 export interface Context {
   backgroundImage: string | undefined;
@@ -20,7 +22,8 @@ const context = React.createContext({} as Context);
 
 const { Provider } = context;
 
-export const ContextWrapper = ({ children }: { children: any }) => {
+export const ContextWrapper = ({ children }: { children: ReactNode }) => {
+  const { i18n } = useTranslation();
   const [search, setSearch] = useState('');
   const [location, setLocation] = useState<app.GeoCodeComponents | undefined>(
     undefined
@@ -35,17 +38,25 @@ export const ContextWrapper = ({ children }: { children: any }) => {
   const [error, setError] = useState<string | undefined>(undefined);
   const [temperatureMetric, setTemperatureMetric] = useState<string>('celsius');
 
-  async function fetchWeathers(searchValue: string) {
+  async function getGeoCode(searchValue: string, lang: string) {
     const responseGeoCode = await axios.get<app.Geocode>('/api/geocode', {
       params: {
         search: searchValue,
+        language: lang,
       },
     });
+    setLocation(responseGeoCode.data.results[0].components);
+    return responseGeoCode;
+  }
+
+  const fetchWeathers = async (searchValue: string) => {
+    const responseGeoCode = await getGeoCode(searchValue, i18n.language);
 
     const res = await axios.get<app.WeatherResponse>('/api/weathers', {
       params: {
         lat: responseGeoCode.data.results[0].geometry.lat,
         lon: responseGeoCode.data.results[0].geometry.lng,
+        lang: i18n.language,
       },
     });
     const resImage = await axios.get<app.Background>('/api/background', {
@@ -59,7 +70,12 @@ export const ContextWrapper = ({ children }: { children: any }) => {
     setCurrentWeather(res.data.current);
     setNextWeathers(res.data.daily);
     setBackgroundImage(resImage.data.background);
-  }
+  };
+
+  useEffect(() => {
+    getGeoCode(search, i18n.language);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i18n.language]);
 
   return (
     <Provider

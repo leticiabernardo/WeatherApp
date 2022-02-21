@@ -1,4 +1,5 @@
-import { memo, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   InputGroup,
   Input,
@@ -17,16 +18,17 @@ interface Props {
 }
 
 const Search = ({ fetchWeathers, setSearch, setError }: Props): JSX.Element => {
+  const { t } = useTranslation();
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchClick = () => {
-    fetchWeathers(searchValue);
+    if (searchValue === '') return;
     setSearch(searchValue);
   };
 
   const handleGeolocationClick = () => {
     if (!('geolocation' in navigator)) {
-      setError('Geolocation is not supported by your browser');
+      setError(t('Geolocation is not supported by your browser'));
     }
     navigator.geolocation.getCurrentPosition(function (position): void {
       if (position?.coords?.latitude && position?.coords?.longitude) {
@@ -56,7 +58,7 @@ const Search = ({ fetchWeathers, setSearch, setError }: Props): JSX.Element => {
           </Button>
         </InputLeftElement>
         <Input
-          placeholder="Nome da cidade..."
+          placeholder={t('city, state or country...')}
           outline="none"
           color="white"
           fontWeight="bold"
@@ -91,11 +93,16 @@ const Search = ({ fetchWeathers, setSearch, setError }: Props): JSX.Element => {
 };
 
 const MemoizedSearch = memo(Search, () => {
-  return true;
+  return false;
 });
 
 const SearchWrapper = (): JSX.Element => {
-  const { fetchWeathers, setSearch, setError } = useAppContext();
+  const { fetchWeathers, setSearch, setError, search } = useAppContext();
+
+  useEffect(() => {
+    fetchWeathers(search);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search]);
 
   return (
     <MemoizedSearch

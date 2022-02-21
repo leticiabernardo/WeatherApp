@@ -4,11 +4,11 @@ import { Request, Response } from 'express';
 import { transformGeoCodes } from './transforms/geocode';
 
 export const getGeocode = (req: Request, res: Response) => {
-  const location = req.query.search;
+  const { language, search } = req.query;
   const params = {
-    q: location,
+    q: search,
     key: process.env.OPENCAGE_KEY,
-    language: 'pt_BR',
+    language,
   };
   return axios
     .get<app.Geocode>('https://api.opencagedata.com/geocode/v1/json', {

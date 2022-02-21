@@ -1,10 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { Box, Text } from '@chakra-ui/react';
 import { useAppContext } from '@/context/Context';
 import { getFullTemperature } from '@/helpers/temperature';
-import { getWeatherName } from '@/helpers/weather';
 import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 
 const WeatherTodayDetails = (): JSX.Element => {
+  const { t } = useTranslation();
   const { currentWeather, temperatureMetric } = useAppContext();
 
   return (
@@ -45,14 +46,14 @@ const WeatherTodayDetails = (): JSX.Element => {
           fontFamily="Montserrat"
           padding="10px 0"
         >
-          {currentWeather && getWeatherName(currentWeather.weather)}
+          {currentWeather && t(currentWeather.weather)}
         </Text>
       </Box>
       <Box color="white" textAlign={{ base: 'left', sm: 'center', lg: 'left' }}>
         {currentWeather?.wind_speed && (
           <Text textShadow="1px 1px 5px rgba(0,0,0,0.3)">
             <Text fontWeight="bold" as="span">
-              Vento:
+              {t('Wind speed: ')}
             </Text>
             {` No ${currentWeather.wind_speed}km/h`}
           </Text>
@@ -60,7 +61,7 @@ const WeatherTodayDetails = (): JSX.Element => {
         {currentWeather?.humidity && (
           <Text textShadow="1px 1px 5px rgba(0,0,0,0.3)">
             <Text fontWeight="bold" as="span">
-              Humidade:
+              {t('Humidity: ')}
             </Text>
             {` ${currentWeather.humidity}%`}
           </Text>
@@ -68,7 +69,7 @@ const WeatherTodayDetails = (): JSX.Element => {
         {currentWeather?.pressure && (
           <Text textShadow="1px 1px 5px rgba(0,0,0,0.3)">
             <Text fontWeight="bold" as="span">
-              Pressão:
+              {t('Pressure: ')}
             </Text>
             {` ${currentWeather.pressure}hPA`}
           </Text>

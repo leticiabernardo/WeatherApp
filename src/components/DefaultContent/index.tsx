@@ -1,7 +1,10 @@
 import { Text, Box } from '@chakra-ui/react';
 import LocationGif from '@/assets/images/location.gif';
+import { useTranslation } from 'react-i18next';
 
 const DefaultContent = () => {
+  const { t } = useTranslation();
+
   return (
     <Box
       display="flex"
@@ -18,7 +21,7 @@ const DefaultContent = () => {
         <img src={LocationGif} width="140" alt="" />
       </Box>
       <Text color="#fff" fontSize="1xl" marginTop="30px" fontFamily="Open Sans">
-        Faça uma busca para iniciar...
+        {t('Search to get started...')}
       </Text>
     </Box>
   );
