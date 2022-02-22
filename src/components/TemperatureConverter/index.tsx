@@ -1,4 +1,4 @@
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button, Tooltip } from '@chakra-ui/react';
 import { useAppContext } from '@/context/Context';
 
 const TemperatureConverter = () => {
@@ -17,7 +17,15 @@ const TemperatureConverter = () => {
         _focus={{ outline: 'none' }}
         onClick={() => handleChangeTemperatureMetric('celsius')}
       >
-        °C
+        <Tooltip
+          label="Celsius"
+          aria-label="A tooltip"
+          hasArrow
+          bg="#282828"
+          placement="left"
+        >
+          °C
+        </Tooltip>
       </Button>
       |
       <Button
@@ -27,7 +35,15 @@ const TemperatureConverter = () => {
         _focus={{ outline: 'none' }}
         onClick={() => handleChangeTemperatureMetric('fahrenheit')}
       >
-        °F
+        <Tooltip
+          label="Fahrenheit"
+          aria-label="A tooltip"
+          hasArrow
+          bg="#282828"
+          placement="left"
+        >
+          °F
+        </Tooltip>
       </Button>
     </Box>
   );
