@@ -1,8 +1,13 @@
+import { Box } from '@chakra-ui/react';
 import WeatherToday from '@/components/Weathers/weatherToday';
 import WeatherNextDays from '@/components/Weathers/weatherNextDays';
-import { Box } from '@chakra-ui/react';
 
-const Weathers = (): JSX.Element => {
+type WeatherProps = {
+  weathers: app.WeatherResponse;
+  temperatureMeasurementUnit: app.MeasurementUnit;
+};
+
+const Weathers = ({ weathers, temperatureMeasurementUnit }: WeatherProps) => {
   return (
     <Box
       display="flex"
@@ -12,8 +17,18 @@ const Weathers = (): JSX.Element => {
       height="80%"
       width="100%"
     >
-      <WeatherToday />
-      <WeatherNextDays />
+      {weathers && (
+        <Box as="span">
+          <WeatherToday
+            weather={weathers.current}
+            temperatureMeasurementUnit={temperatureMeasurementUnit}
+          />
+          <WeatherNextDays
+            weathers={weathers.daily}
+            temperatureMeasurementUnit={temperatureMeasurementUnit}
+          />
+        </Box>
+      )}
     </Box>
   );
 };

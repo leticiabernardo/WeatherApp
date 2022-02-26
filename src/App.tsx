@@ -1,6 +1,6 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import Main from '@/pages/Main';
-import { ContextWrapper } from '@/context/Context';
 import '@fontsource/montserrat/700.css';
 import '@fontsource/open-sans/400.css';
 import './i18n';
@@ -25,13 +25,15 @@ const theme = extendTheme({
   },
 });
 
+const queryClient = new QueryClient();
+
 export const App = () => {
   return (
-    <ChakraProvider theme={theme}>
-      <ContextWrapper>
+    <QueryClientProvider client={queryClient}>
+      <ChakraProvider theme={theme}>
         <Main />
-      </ContextWrapper>
-    </ChakraProvider>
+      </ChakraProvider>
+    </QueryClientProvider>
   );
 };
 

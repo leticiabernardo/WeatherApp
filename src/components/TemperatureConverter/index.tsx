@@ -1,21 +1,26 @@
 import { Box, Button, Tooltip } from '@chakra-ui/react';
-import { useAppContext } from '@/context/Context';
 
-const TemperatureConverter = () => {
-  const { temperatureMetric, setTemperatureMetric } = useAppContext();
+type HeaderProps = {
+  measurementUnit?: app.MeasurementUnit;
+  setMeasurementUnit: (metric: app.MeasurementUnit) => void;
+};
 
-  const handleChangeTemperatureMetric = (metric: string) => {
-    setTemperatureMetric(metric);
+const TemperatureConverter = ({
+  measurementUnit,
+  setMeasurementUnit,
+}: HeaderProps) => {
+  const handleChangeMeasurementUnit = (metric: app.MeasurementUnit) => {
+    setMeasurementUnit(metric);
   };
 
   return (
     <Box as="span" padding="0 0 4px" color="#a9a9a9">
       <Button
         variant="link"
-        color={temperatureMetric === 'celsius' ? 'white' : '#999'}
+        color={measurementUnit === 'celsius' ? 'white' : '#999'}
         _hover={{ color: '#ccc' }}
         _focus={{ outline: 'none' }}
-        onClick={() => handleChangeTemperatureMetric('celsius')}
+        onClick={() => handleChangeMeasurementUnit('celsius')}
       >
         <Tooltip
           label="Celsius"
@@ -30,10 +35,10 @@ const TemperatureConverter = () => {
       |
       <Button
         variant="link"
-        color={temperatureMetric === 'fahrenheit' ? 'white' : '#999'}
+        color={measurementUnit === 'fahrenheit' ? 'white' : '#999'}
         _hover={{ color: '#ccc' }}
         _focus={{ outline: 'none' }}
-        onClick={() => handleChangeTemperatureMetric('fahrenheit')}
+        onClick={() => handleChangeMeasurementUnit('fahrenheit')}
       >
         <Tooltip
           label="Fahrenheit"
@@ -48,5 +53,11 @@ const TemperatureConverter = () => {
     </Box>
   );
 };
+
+const defaultProps = {
+  measurementUnit: 'celsius',
+};
+
+TemperatureConverter.defaultProps = defaultProps;
 
 export default TemperatureConverter;

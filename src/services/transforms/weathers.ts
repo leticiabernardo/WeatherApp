@@ -15,9 +15,9 @@ const mountCurrentWeather = (
     wind_speed: curr.wind_speed || undefined,
     humidity: curr.humidity || undefined,
     pressure: curr.pressure || undefined,
-    date: curr.dt || undefined,
+    date: curr.dt,
+    temperature: curr.temp || undefined,
   };
-  if (curr.temp) weather.temperature = curr.temp || 0;
 
   return weather;
 };
@@ -26,8 +26,9 @@ const mountNextWeathers = (
   weathers: app.DailyWeatherForecast[]
 ): app.DailyWeathers[] => {
   return weathers.splice(0, MAX_WEEK_DAYS).map(weather => {
+    const tempAverage = (weather.temp.max + weather.temp.min) / 2;
     return {
-      ...mountCurrentWeather({ ...weather, temp: undefined }),
+      ...mountCurrentWeather({ ...weather, temp: tempAverage }),
       temp: {
         min: weather.temp?.min || 0,
         max: weather.temp?.max || 0,

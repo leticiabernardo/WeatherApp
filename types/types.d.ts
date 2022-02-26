@@ -40,6 +40,8 @@ declare module app {
     max: number;
   }
 
+  type MeasurementUnit = 'celsius' | 'fahrenheit';
+
   type WeatherName =
     | 'Clear'
     | 'Clouds'
@@ -64,6 +66,8 @@ declare module app {
     wind_speed?: number;
     weather: WeatherName;
     temperature?: number;
+    fullTemperature?: string;
+    location?: string;
   }
 
   export interface DailyWeathers {

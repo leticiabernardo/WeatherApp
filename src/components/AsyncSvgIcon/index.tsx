@@ -30,6 +30,7 @@ const AsyncSvgIcon = ({ svg, options }: AsyncSvgIconProps) => {
     <div />
   );
 };
+
 AsyncSvgIcon.defaultProps = defaultProps;
 
 export default AsyncSvgIcon;

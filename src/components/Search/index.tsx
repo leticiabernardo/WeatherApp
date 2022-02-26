@@ -1,29 +1,30 @@
-import { memo, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  InputGroup,
+  Button,
   Input,
+  InputGroup,
   InputLeftElement,
   InputRightElement,
-  Button,
+  Tooltip,
 } from '@chakra-ui/react';
-import { useAppContext } from '@/context/Context';
 import { ReactComponent as IconSearch } from '@/assets/images/icon-search.svg';
 import { ReactComponent as IconGeolocation } from '@/assets/images/icon-map.svg';
+import { sanitizeString } from '@/helpers/strings';
 
-interface Props {
-  fetchWeathers: (search: string) => void;
+interface SearchProps {
   setSearch: (search: string) => void;
   setError: (e: string) => void;
 }
 
-const Search = ({ fetchWeathers, setSearch, setError }: Props): JSX.Element => {
+const Search = ({ setSearch, setError }: SearchProps): JSX.Element => {
   const { t } = useTranslation();
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchClick = () => {
-    if (searchValue === '') return;
-    setSearch(searchValue);
+    const place = sanitizeString(searchValue);
+    if (place === '') return;
+    setSearch(place);
   };
 
   const handleGeolocationClick = () => {
@@ -36,26 +37,33 @@ const Search = ({ fetchWeathers, setSearch, setError }: Props): JSX.Element => {
           position.coords.latitude,
           position.coords.longitude,
         ].join(',');
-        fetchWeathers(coords);
         setSearch(coords);
       }
     });
   };
 
   return (
-    <div className="search">
+    <div>
       <InputGroup size="md">
         <InputLeftElement background="transparent">
-          <Button
-            h="1.75rem"
-            size="sm"
-            variant="link"
-            color="white"
-            _focus={{ outline: 'none' }}
-            onClick={handleGeolocationClick}
+          <Tooltip
+            label={t('Click here to use your current location')}
+            aria-label="geolocation"
+            hasArrow
+            bg="#282828"
+            placement="left"
           >
-            <IconGeolocation fill="white" width="20px" height="20px" />
-          </Button>
+            <Button
+              h="1.75rem"
+              size="sm"
+              variant="link"
+              color="white"
+              _focus={{ outline: 'none' }}
+              onClick={handleGeolocationClick}
+            >
+              <IconGeolocation fill="white" width="20px" height="20px" />
+            </Button>
+          </Tooltip>
         </InputLeftElement>
         <Input
           placeholder={t('city, state or country...')}
@@ -92,25 +100,4 @@ const Search = ({ fetchWeathers, setSearch, setError }: Props): JSX.Element => {
   );
 };
 
-const MemoizedSearch = memo(Search, () => {
-  return false;
-});
-
-const SearchWrapper = (): JSX.Element => {
-  const { fetchWeathers, setSearch, setError, search } = useAppContext();
-
-  useEffect(() => {
-    fetchWeathers(search);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search]);
-
-  return (
-    <MemoizedSearch
-      fetchWeathers={fetchWeathers}
-      setSearch={setSearch}
-      setError={setError}
-    />
-  );
-};
-
-export default SearchWrapper;
+export default Search;
