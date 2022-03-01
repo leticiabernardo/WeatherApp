@@ -5,7 +5,7 @@ type HeaderProps = {
   setMeasurementUnit: (metric: app.MeasurementUnit) => void;
 };
 
-const TemperatureConverter = ({
+const TemperatureSwitcher = ({
   measurementUnit,
   setMeasurementUnit,
 }: HeaderProps) => {
@@ -25,9 +25,8 @@ const TemperatureConverter = ({
         <Tooltip
           label="Celsius"
           aria-label="A tooltip"
-          hasArrow
-          bg="#282828"
           placement="left"
+          hasArrow
         >
           °C
         </Tooltip>
@@ -43,9 +42,8 @@ const TemperatureConverter = ({
         <Tooltip
           label="Fahrenheit"
           aria-label="A tooltip"
-          hasArrow
-          bg="#282828"
           placement="left"
+          hasArrow
         >
           °F
         </Tooltip>
@@ -58,6 +56,6 @@ const defaultProps = {
   measurementUnit: 'celsius',
 };
 
-TemperatureConverter.defaultProps = defaultProps;
+TemperatureSwitcher.defaultProps = defaultProps;
 
-export default TemperatureConverter;
+export default TemperatureSwitcher;

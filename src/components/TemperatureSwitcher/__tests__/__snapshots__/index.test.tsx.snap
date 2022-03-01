@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`temperature switcher events should change to celsius 1`] = `
+<div>
+  <span
+    class="css-10kghbw"
+  >
+    <button
+      class="chakra-button css-hu7fh3"
+      type="button"
+    >
+      <span
+        class="css-0"
+        tabindex="0"
+      >
+        °C
+      </span>
+    </button>
+    |
+    <button
+      class="chakra-button css-yqy1ty"
+      type="button"
+    >
+      <span
+        class="css-0"
+        tabindex="0"
+      >
+        °F
+      </span>
+    </button>
+  </span>
+</div>
+`;
+
+exports[`temperature switcher events should change to fahrenheit 1`] = `
+<div>
+  <span
+    class="css-10kghbw"
+  >
+    <button
+      class="chakra-button css-yqy1ty"
+      type="button"
+    >
+      <span
+        class="css-0"
+        tabindex="0"
+      >
+        °C
+      </span>
+    </button>
+    |
+    <button
+      class="chakra-button css-hu7fh3"
+      type="button"
+    >
+      <span
+        class="css-0"
+        tabindex="0"
+      >
+        °F
+      </span>
+    </button>
+  </span>
+</div>
+`;
+
+exports[`temperature switcher render render the component 1`] = `
+<div>
+  <span
+    class="css-10kghbw"
+  >
+    <button
+      class="chakra-button css-yqy1ty"
+      type="button"
+    >
+      <span
+        class="css-0"
+        tabindex="0"
+      >
+        °C
+      </span>
+    </button>
+    |
+    <button
+      class="chakra-button css-hu7fh3"
+      type="button"
+    >
+      <span
+        class="css-0"
+        tabindex="0"
+      >
+        °F
+      </span>
+    </button>
+  </span>
+</div>
+`;

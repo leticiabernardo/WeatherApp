@@ -1,6 +1,6 @@
 import { Box, Link } from '@chakra-ui/react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import TemperatureConverter from '@/components/TemperatureConverter';
+import TemperatureSwitcher from '@/components/TemperatureSwitcher';
 import Search from '@/components/Search';
 
 type HeaderProps = {
@@ -31,7 +31,7 @@ const Header = ({
 
       <Box textAlign="right">
         <Box display="flex" justifyContent="space-around">
-          <TemperatureConverter
+          <TemperatureSwitcher
             measurementUnit={temperatureMeasurementUnit}
             setMeasurementUnit={setTemperatureMeasurementUnit}
           />
