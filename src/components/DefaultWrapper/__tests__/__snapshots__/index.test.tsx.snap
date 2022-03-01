@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default wrapper render render the component 1`] = `
+<div>
+  <div
+    class="chakra-container css-zxmic8"
+  >
+    <div
+      class="chakra-container css-1n5don6"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`default wrapper render should contain the css with background image 1`] = `
+<div>
+  <div
+    class="chakra-container css-1i8jxd6"
+  >
+    <div
+      class="chakra-container css-1n5don6"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </div>
+</div>
+`;
