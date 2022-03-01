@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default content render render the component 1`] = `
+<div>
+  <div
+    class="css-1uf6n7f"
+  >
+    <div
+      class="css-0"
+    >
+      <img
+        alt=""
+        src="[object Object]"
+        width="140"
+      />
+    </div>
+    <p
+      class="chakra-text css-9sexf0"
+    >
+      Search to get started...
+    </p>
+  </div>
+</div>
+`;
