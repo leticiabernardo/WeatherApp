@@ -4,16 +4,20 @@ import { getFullTemperature } from '@/helpers/temperature';
 import { getWeekday } from '@/helpers/weekday';
 import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 
-const WeatherNextDays = (props: {
+type WeatherNextDaysProps = {
   weathers: app.DailyWeathers[];
   temperatureMeasurementUnit: string;
-}) => {
+};
+
+const WeatherNextDays = ({
+  weathers,
+  temperatureMeasurementUnit,
+}: WeatherNextDaysProps) => {
   const { t, i18n } = useTranslation();
-  const { weathers, temperatureMeasurementUnit } = props;
 
   const mountTemperatures = (temperatures: app.Temperature): JSX.Element => {
     return (
-      <Text
+      <Box
         textShadow="1px 1px 5px rgba(0,0,0,0.3)"
         fontSize="sm"
         textAlign="center"
@@ -36,7 +40,7 @@ const WeatherNextDays = (props: {
             interpolation: { escapeValue: false },
           })}
         </Text>
-      </Text>
+      </Box>
     );
   };
 
@@ -55,7 +59,7 @@ const WeatherNextDays = (props: {
           textShadow="1px 1px 5px rgba(0,0,0,0.3)"
           textTransform="capitalize"
         >
-          {weather.date ? getWeekday(weather.date * 1000, i18n.language) : ''}
+          {getWeekday(weather.date * 1000, i18n.language)}
         </Text>
 
         <Box

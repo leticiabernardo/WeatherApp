@@ -35,7 +35,7 @@ const WeatherToday = (props: {
             fontFamily="Open Sans"
             textShadow="1px 1px 5px rgba(0,0,0,0.3)"
           >
-            {format(new Date(), 'HH:ii')}
+            {format(new Date(), 'HH:mm')}
           </Text>
           <Text
             fontSize="sm"

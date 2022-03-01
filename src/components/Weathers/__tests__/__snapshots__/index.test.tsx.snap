@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`weathers render render the component 1`] = `
+<div>
+  <div
+    class="css-57i5ee"
+  >
+    <span
+      class="css-0"
+    >
+      <div>
+        <div
+          class="css-8atqhb"
+        >
+          <div
+            class="css-1hoatnx"
+          >
+            <p
+              class="chakra-text css-1vza8hn"
+            >
+              Ceará
+            </p>
+            <p
+              class="chakra-text css-i2jvxk"
+            >
+              11:47
+            </p>
+            <p
+              class="chakra-text css-xj20wo"
+            >
+              Today {{date}}
+            </p>
+          </div>
+          <div
+            class="css-1uxcmd3"
+          >
+            <div
+              class="css-9nbp22"
+            >
+              <div
+                class="css-y7eb69"
+              >
+                27 °C
+              </div>
+              <div
+                class="css-rt6i1c"
+              >
+                <div
+                  class="svg-mock"
+                />
+                <p
+                  class="chakra-text css-187qkfd"
+                >
+                  Clear
+                </p>
+              </div>
+              <div
+                class="css-1mrlgg5"
+              >
+                <p
+                  class="chakra-text css-1ac62sw"
+                >
+                  <span
+                    class="chakra-text css-in3yi3"
+                  >
+                    Wind speed: 
+                  </span>
+                   No 80km/h
+                </p>
+                <p
+                  class="chakra-text css-1ac62sw"
+                >
+                  <span
+                    class="chakra-text css-in3yi3"
+                  >
+                    Humidity: 
+                  </span>
+                   7%
+                </p>
+                <p
+                  class="chakra-text css-1ac62sw"
+                >
+                  <span
+                    class="chakra-text css-in3yi3"
+                  >
+                    Pressure: 
+                  </span>
+                   25hPA
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1r78p7n"
+      >
+        <div
+          class="css-u8prhs"
+        >
+          <p
+            class="chakra-text css-4g3ufm"
+          >
+            segunda
+          </p>
+          <div
+            class="css-1a82xio"
+          >
+            <div
+              class="svg-mock"
+            />
+            <p
+              class="chakra-text css-1fub2xe"
+            >
+              Clear
+            </p>
+          </div>
+          <div
+            class="css-kwfulx"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Max: {{max}}
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Min: {{min}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+`;

@@ -9,7 +9,7 @@ declare module app {
   }
 
   export interface CurrentWeatherForecast {
-    dt?: number;
+    dt: number;
     temp?: number;
     pressure: number;
     humidity: number;
@@ -60,7 +60,7 @@ declare module app {
     | 'Tornado';
 
   export interface CurrentWeather {
-    date?: number;
+    date: number;
     pressure?: number;
     humidity?: number;
     wind_speed?: number;
@@ -71,7 +71,7 @@ declare module app {
   }
 
   export interface DailyWeathers {
-    date?: number;
+    date: number;
     pressure?: number;
     humidity?: number;
     wind_speed?: number;
@@ -94,8 +94,8 @@ declare module app {
   export interface GeoCodeComponents {
     country: string;
     country_code: string;
-    state: string;
-    state_code: string;
+    state?: string;
+    state_code?: string;
     city?: string;
     town?: string;
   }
