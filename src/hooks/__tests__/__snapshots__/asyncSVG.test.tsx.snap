@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hook async svg test should return a component 1`] = `
+<div>
+  <div
+    class="svg-mock"
+  />
+</div>
+`;
+
+exports[`hook async svg test should return error 1`] = `
+<div>
+  <div>
+    erro
+  </div>
+</div>
+`;
