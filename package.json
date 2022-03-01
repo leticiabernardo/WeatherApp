@@ -11,7 +11,9 @@
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
     "serve": "yarn build && cross-env NODE_ENV=production node --experimental-modules dist/server.js",
-    "lint": "eslint . --ext .js,.ts,.tsx"
+    "lint": "eslint . --ext .js,.ts,.tsx",
+    "test": "jest --config=./jest.config.js -u --verbose",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.8.3",
@@ -43,10 +45,11 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/react-hooks": "^7.0.2",
     "@types/compression": "^1.7.2",
     "@types/express": "^4.17.13",
-    "@types/jest": "^27.4.0",
+    "@types/jest": "^27.4.1",
     "@types/node": "^17.0.15",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.10",
@@ -63,6 +66,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
