@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search component events should click button to search value 1`] = `
+<div>
+  <div>
+    <div
+      class="chakra-input__group css-4302v8"
+    >
+      <div
+        class="chakra-input__left-element css-5tdink"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="geolocation-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+      <input
+        class="chakra-input css-ryoawo"
+        placeholder="city, state or country..."
+        value="ceara"
+      />
+      <div
+        class="chakra-input__right-element css-jwi0po"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="search-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`search component events should click button to search with empty value 1`] = `
+<div>
+  <div>
+    <div
+      class="chakra-input__group css-4302v8"
+    >
+      <div
+        class="chakra-input__left-element css-5tdink"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="geolocation-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+      <input
+        class="chakra-input css-ryoawo"
+        placeholder="city, state or country..."
+        value=""
+      />
+      <div
+        class="chakra-input__right-element css-jwi0po"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="search-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`search component events should key enter press to search value 1`] = `
+<div>
+  <div>
+    <div
+      class="chakra-input__group css-4302v8"
+    >
+      <div
+        class="chakra-input__left-element css-5tdink"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="geolocation-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+      <input
+        class="chakra-input css-ryoawo"
+        placeholder="city, state or country..."
+        value="ceara"
+      />
+      <div
+        class="chakra-input__right-element css-jwi0po"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="search-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`search render render the component 1`] = `
+<div>
+  <div>
+    <div
+      class="chakra-input__group css-4302v8"
+    >
+      <div
+        class="chakra-input__left-element css-5tdink"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="geolocation-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+      <input
+        class="chakra-input css-ryoawo"
+        placeholder="city, state or country..."
+        value=""
+      />
+      <div
+        class="chakra-input__right-element css-jwi0po"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="search-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`successfully render location (latitude and longitude) by browser should click the button to get the users geolocation 1`] = `
+<div>
+  <div>
+    <div
+      class="chakra-input__group css-4302v8"
+    >
+      <div
+        class="chakra-input__left-element css-5tdink"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="geolocation-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+      <input
+        class="chakra-input css-ryoawo"
+        placeholder="city, state or country..."
+        value=""
+      />
+      <div
+        class="chakra-input__right-element css-jwi0po"
+      >
+        <button
+          class="chakra-button css-dzjm3n"
+          data-testid="search-button"
+          type="button"
+        >
+          <div
+            class="svg-mock"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

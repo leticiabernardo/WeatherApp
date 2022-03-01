@@ -30,6 +30,7 @@ const Search = ({ setSearch, setError }: SearchProps): JSX.Element => {
   const handleGeolocationClick = () => {
     if (!('geolocation' in navigator)) {
       setError(t('Geolocation is not supported by your browser'));
+      return;
     }
     navigator.geolocation.getCurrentPosition(function (position): void {
       if (position?.coords?.latitude && position?.coords?.longitude) {
@@ -50,7 +51,6 @@ const Search = ({ setSearch, setError }: SearchProps): JSX.Element => {
             label={t('Click here to use your current location')}
             aria-label="geolocation"
             hasArrow
-            bg="#282828"
             placement="left"
           >
             <Button
@@ -60,6 +60,7 @@ const Search = ({ setSearch, setError }: SearchProps): JSX.Element => {
               color="white"
               _focus={{ outline: 'none' }}
               onClick={handleGeolocationClick}
+              data-testid="geolocation-button"
             >
               <IconGeolocation fill="white" width="20px" height="20px" />
             </Button>
@@ -91,6 +92,7 @@ const Search = ({ setSearch, setError }: SearchProps): JSX.Element => {
             color="white"
             _focus={{ outline: 'none' }}
             onClick={handleSearchClick}
+            data-testid="search-button"
           >
             <IconSearch fill="white" width="20px" height="20px" />
           </Button>
