@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default wrapper render render the component 1`] = `
+<div>
+  <div
+    class="css-95adgs"
+  >
+    <div
+      class="css-bp306l"
+    >
+      <a
+        class="chakra-link css-3sqr2h"
+        href="./"
+      >
+        weather.app
+      </a>
+    </div>
+    <div
+      class="css-s2uf1z"
+    >
+      <div
+        class="css-1bnxa12"
+      >
+        <span
+          class="css-10kghbw"
+        >
+          <button
+            class="chakra-button css-yqy1ty"
+            type="button"
+          >
+            <span
+              class="css-0"
+              tabindex="0"
+            >
+              °C
+            </span>
+          </button>
+          |
+          <button
+            class="chakra-button css-hu7fh3"
+            type="button"
+          >
+            <span
+              class="css-0"
+              tabindex="0"
+            >
+              °F
+            </span>
+          </button>
+        </span>
+        <span
+          class="css-xe4d2t"
+        >
+          <button
+            class="chakra-button css-hu7fh3"
+            type="button"
+          >
+            EN
+          </button>
+          |
+          <button
+            class="chakra-button css-yqy1ty"
+            type="button"
+          >
+            PT
+          </button>
+        </span>
+      </div>
+      <div>
+        <div
+          class="chakra-input__group css-4302v8"
+        >
+          <div
+            class="chakra-input__left-element css-5tdink"
+          >
+            <button
+              class="chakra-button css-dzjm3n"
+              data-testid="geolocation-button"
+              type="button"
+            >
+              <div
+                class="svg-mock"
+              />
+            </button>
+          </div>
+          <input
+            class="chakra-input css-ryoawo"
+            placeholder="city, state or country..."
+            value=""
+          />
+          <div
+            class="chakra-input__right-element css-jwi0po"
+          >
+            <button
+              class="chakra-button css-dzjm3n"
+              data-testid="search-button"
+              type="button"
+            >
+              <div
+                class="svg-mock"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
