@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`language switcher events should change to English language 1`] = `
+<div>
+  <span
+    class="css-xe4d2t"
+  >
+    <button
+      class="chakra-button css-hu7fh3"
+      type="button"
+    >
+      EN
+    </button>
+    |
+    <button
+      class="chakra-button css-yqy1ty"
+      type="button"
+    >
+      PT
+    </button>
+  </span>
+</div>
+`;
+
+exports[`language switcher events should change to Portuguese language 1`] = `
+<div>
+  <span
+    class="css-xe4d2t"
+  >
+    <button
+      class="chakra-button css-hu7fh3"
+      type="button"
+    >
+      EN
+    </button>
+    |
+    <button
+      class="chakra-button css-yqy1ty"
+      type="button"
+    >
+      PT
+    </button>
+  </span>
+</div>
+`;
+
+exports[`language switcher render render the component 1`] = `
+<div>
+  <span
+    class="css-xe4d2t"
+  >
+    <button
+      class="chakra-button css-hu7fh3"
+      type="button"
+    >
+      EN
+    </button>
+    |
+    <button
+      class="chakra-button css-yqy1ty"
+      type="button"
+    >
+      PT
+    </button>
+  </span>
+</div>
+`;
