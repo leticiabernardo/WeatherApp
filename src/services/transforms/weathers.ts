@@ -26,9 +26,8 @@ const mountNextWeathers = (
   weathers: app.DailyWeatherForecast[]
 ): app.DailyWeathers[] => {
   return weathers.splice(0, MAX_WEEK_DAYS).map(weather => {
-    const tempAverage = (weather.temp.max + weather.temp.min) / 2;
     return {
-      ...mountCurrentWeather({ ...weather, temp: tempAverage }),
+      ...mountCurrentWeather({ ...weather, temp: undefined }),
       temp: {
         min: weather.temp?.min || 0,
         max: weather.temp?.max || 0,

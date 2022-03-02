@@ -9,7 +9,7 @@ export function getCityOrTown(
 export function getWeatherLocation(
   searchLocation: app.GeoCodeComponents,
   type = 'short'
-): string | undefined {
+): string {
   const state = searchLocation?.state;
   const country = searchLocation?.country;
   const stateCode = searchLocation?.state_code;
@@ -26,4 +26,16 @@ export function getWeatherLocation(
     return [state, country].filter(Boolean).join(' - ');
   }
   return country;
+}
+
+export function addKeyToDailyWeathers(
+  weathers: app.DailyWeathers[]
+): app.DailyWeathers[] {
+  return weathers.map(function (
+    el: app.DailyWeathers,
+    i: number
+  ): app.DailyWeathers {
+    const temperatures = el.temp ? el.temp : { temp: {} };
+    return { ...el, ...temperatures, key: `daily-${i + 1}` };
+  });
 }

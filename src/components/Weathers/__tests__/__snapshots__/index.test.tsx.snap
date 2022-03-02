@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`weathers render render the component 1`] = `
+exports[`weathers render render the component loading all data 1`] = `
 <div>
   <div
     class="css-57i5ee"
   >
     <span
-      class="css-0"
+      class="css-8atqhb"
     >
       <div>
         <div
@@ -15,21 +15,53 @@ exports[`weathers render render the component 1`] = `
           <div
             class="css-1hoatnx"
           >
-            <p
-              class="chakra-text css-1vza8hn"
+            <div
+              class="chakra-skeleton css-trbgv7"
             >
-              Ceará
-            </p>
-            <p
-              class="chakra-text css-i2jvxk"
+              <p
+                class="chakra-text css-1vza8hn"
+              >
+                Recife, Pernambuco, Brasil
+              </p>
+            </div>
+            <div
+              class="chakra-skeleton__group css-o7rt0f"
             >
-              11:47
-            </p>
-            <p
-              class="chakra-text css-xj20wo"
+              <div
+                class="chakra-skeleton css-ceqd5c"
+              >
+                <p
+                  class="chakra-text css-i2jvxk"
+                >
+                  11:47
+                </p>
+              </div>
+              <div
+                class="chakra-skeleton css-ceqd5c"
+              />
+              <div
+                class="chakra-skeleton css-4mg54c"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-o7rt0f"
             >
-              Today {{date}}
-            </p>
+              <div
+                class="chakra-skeleton css-khywil"
+              >
+                <p
+                  class="chakra-text css-xj20wo"
+                >
+                  Today {{date}}
+                </p>
+              </div>
+              <div
+                class="chakra-skeleton css-khywil"
+              />
+              <div
+                class="chakra-skeleton css-4mg54c"
+              />
+            </div>
           </div>
           <div
             class="css-1uxcmd3"
@@ -40,53 +72,102 @@ exports[`weathers render render the component 1`] = `
               <div
                 class="css-y7eb69"
               >
-                27 °C
+                <div
+                  class="chakra-skeleton__group css-0"
+                >
+                  <div
+                    class="chakra-skeleton css-1jh529t"
+                  >
+                    <p
+                      class="chakra-text css-0"
+                    />
+                  </div>
+                  <div
+                    class="chakra-skeleton css-1jh529t"
+                  />
+                  <div
+                    class="chakra-skeleton css-1np5pcc"
+                  />
+                </div>
               </div>
               <div
                 class="css-rt6i1c"
               >
                 <div
-                  class="svg-mock"
+                  class="chakra-skeleton css-1bqbi46"
                 />
-                <p
-                  class="chakra-text css-187qkfd"
+                <div
+                  class="chakra-skeleton__group css-g89h0y"
                 >
-                  Clear
-                </p>
+                  <div
+                    class="chakra-skeleton css-ef0wse"
+                  >
+                    <p
+                      class="chakra-text css-187qkfd"
+                    />
+                  </div>
+                  <div
+                    class="chakra-skeleton css-ef0wse"
+                  />
+                  <div
+                    class="chakra-skeleton css-54y0cj"
+                  />
+                </div>
               </div>
               <div
                 class="css-1mrlgg5"
               >
-                <p
-                  class="chakra-text css-1ac62sw"
+                <div
+                  class="css-1ac62sw"
                 >
-                  <span
-                    class="chakra-text css-in3yi3"
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
                   >
-                    Wind speed: 
-                  </span>
-                   No 80km/h
-                </p>
-                <p
-                  class="chakra-text css-1ac62sw"
+                    <div
+                      class="chakra-skeleton css-18csyk"
+                    />
+                    <div
+                      class="chakra-skeleton css-18csyk"
+                    />
+                    <div
+                      class="chakra-skeleton css-ntuw0i"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-1ac62sw"
                 >
-                  <span
-                    class="chakra-text css-in3yi3"
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
                   >
-                    Humidity: 
-                  </span>
-                   7%
-                </p>
-                <p
-                  class="chakra-text css-1ac62sw"
+                    <div
+                      class="chakra-skeleton css-18csyk"
+                    />
+                    <div
+                      class="chakra-skeleton css-18csyk"
+                    />
+                    <div
+                      class="chakra-skeleton css-ntuw0i"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-1ac62sw"
                 >
-                  <span
-                    class="chakra-text css-in3yi3"
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
                   >
-                    Pressure: 
-                  </span>
-                   25hPA
-                </p>
+                    <div
+                      class="chakra-skeleton css-18csyk"
+                    />
+                    <div
+                      class="chakra-skeleton css-18csyk"
+                    />
+                    <div
+                      class="chakra-skeleton css-ntuw0i"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -96,38 +177,1561 @@ exports[`weathers render render the component 1`] = `
         class="css-1r78p7n"
       >
         <div
-          class="css-u8prhs"
+          class="css-12j7138"
         >
-          <p
-            class="chakra-text css-4g3ufm"
-          >
-            segunda
-          </p>
           <div
-            class="css-1a82xio"
+            class="chakra-skeleton__group css-1lk7enj"
           >
             <div
-              class="svg-mock"
+              class="chakra-skeleton css-khywil"
             />
-            <p
-              class="chakra-text css-1fub2xe"
-            >
-              Clear
-            </p>
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-4mg54c"
+            />
           </div>
           <div
-            class="css-kwfulx"
+            class="css-1pr5wpq"
           >
-            <p
-              class="chakra-text css-0"
+            <div
+              class="chakra-skeleton css-1l8itak"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
             >
-              Max: {{max}}
-            </p>
-            <p
-              class="chakra-text css-0"
+              <div
+                class="chakra-skeleton css-dqcl97"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-dqcl97"
+              />
+              <div
+                class="chakra-skeleton css-4mg54c"
+              />
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
             >
-              Min: {{min}}
-            </p>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-4mg54c"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-1l8itak"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-dqcl97"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-dqcl97"
+              />
+              <div
+                class="chakra-skeleton css-4mg54c"
+              />
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-4mg54c"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-1l8itak"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-dqcl97"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-dqcl97"
+              />
+              <div
+                class="chakra-skeleton css-4mg54c"
+              />
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-4mg54c"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-1l8itak"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-dqcl97"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-dqcl97"
+              />
+              <div
+                class="chakra-skeleton css-4mg54c"
+              />
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-4mg54c"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-1l8itak"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-dqcl97"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-dqcl97"
+              />
+              <div
+                class="chakra-skeleton css-4mg54c"
+              />
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-4mg54c"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-1l8itak"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-dqcl97"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-dqcl97"
+              />
+              <div
+                class="chakra-skeleton css-4mg54c"
+              />
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-khywil"
+            />
+            <div
+              class="chakra-skeleton css-4mg54c"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-1l8itak"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-dqcl97"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-dqcl97"
+              />
+              <div
+                class="chakra-skeleton css-4mg54c"
+              />
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-6lxqjc"
+              />
+              <div
+                class="chakra-skeleton css-a8betm"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`weathers render render the component loading the geocode data 1`] = `
+<div>
+  <div
+    class="css-57i5ee"
+  >
+    <span
+      class="css-8atqhb"
+    >
+      <div>
+        <div
+          class="css-8atqhb"
+        >
+          <div
+            class="css-1hoatnx"
+          >
+            <div
+              class="chakra-skeleton css-trbgv7"
+            >
+              <p
+                class="chakra-text css-1vza8hn"
+              >
+                Recife, Pernambuco, Brasil
+              </p>
+            </div>
+            <div
+              class="chakra-skeleton__group css-o7rt0f"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-i2jvxk"
+                >
+                  11:47
+                </p>
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-o7rt0f"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-xj20wo"
+                >
+                  Today {{date}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-1uxcmd3"
+          >
+            <div
+              class="css-9nbp22"
+            >
+              <div
+                class="css-y7eb69"
+              >
+                <div
+                  class="chakra-skeleton__group css-0"
+                >
+                  <div
+                    class="chakra-skeleton css-cdkrf0"
+                  >
+                    <p
+                      class="chakra-text css-0"
+                    >
+                      27 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-rt6i1c"
+              >
+                <div
+                  class="chakra-skeleton css-19zleqy"
+                >
+                  <div
+                    class="svg-mock"
+                  />
+                </div>
+                <div
+                  class="chakra-skeleton__group css-g89h0y"
+                >
+                  <div
+                    class="chakra-skeleton css-cdkrf0"
+                  >
+                    <p
+                      class="chakra-text css-187qkfd"
+                    >
+                      Clear
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-1mrlgg5"
+              >
+                <div
+                  class="css-1ac62sw"
+                >
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
+                  >
+                    <div
+                      class="chakra-skeleton css-cdkrf0"
+                    >
+                      <span
+                        class="chakra-text css-in3yi3"
+                      >
+                        Wind speed: 
+                      </span>
+                       No 80km/h
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1ac62sw"
+                >
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
+                  >
+                    <div
+                      class="chakra-skeleton css-cdkrf0"
+                    >
+                      <span
+                        class="chakra-text css-in3yi3"
+                      >
+                        Humidity: 
+                      </span>
+                       7%
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1ac62sw"
+                >
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
+                  >
+                    <div
+                      class="chakra-skeleton css-cdkrf0"
+                    >
+                      <span
+                        class="chakra-text css-in3yi3"
+                      >
+                        Pressure: 
+                      </span>
+                       25hPA
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1r78p7n"
+      >
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-cdkrf0"
+            >
+              <p
+                class="chakra-text css-4g3ufm"
+              >
+                segunda
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-wbxo62"
+            >
+              <div
+                class="svg-mock"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                >
+                  Clear
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  Max: {{max}}
+                </p>
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  Min: {{min}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`weathers render render the component with the weathers data 1`] = `
+<div>
+  <div
+    class="css-57i5ee"
+  >
+    <span
+      class="css-8atqhb"
+    >
+      <div>
+        <div
+          class="css-8atqhb"
+        >
+          <div
+            class="css-1hoatnx"
+          >
+            <div
+              class="chakra-skeleton css-1ph0op8"
+            >
+              <p
+                class="chakra-text css-1vza8hn"
+              >
+                Recife, Pernambuco, Brasil
+              </p>
+            </div>
+            <div
+              class="chakra-skeleton__group css-o7rt0f"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-i2jvxk"
+                >
+                  11:47
+                </p>
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-o7rt0f"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-xj20wo"
+                >
+                  Today {{date}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-1uxcmd3"
+          >
+            <div
+              class="css-9nbp22"
+            >
+              <div
+                class="css-y7eb69"
+              >
+                <div
+                  class="chakra-skeleton__group css-0"
+                >
+                  <div
+                    class="chakra-skeleton css-cdkrf0"
+                  >
+                    <p
+                      class="chakra-text css-0"
+                    >
+                      27 °C
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-rt6i1c"
+              >
+                <div
+                  class="chakra-skeleton css-19zleqy"
+                >
+                  <div
+                    class="svg-mock"
+                  />
+                </div>
+                <div
+                  class="chakra-skeleton__group css-g89h0y"
+                >
+                  <div
+                    class="chakra-skeleton css-cdkrf0"
+                  >
+                    <p
+                      class="chakra-text css-187qkfd"
+                    >
+                      Clear
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-1mrlgg5"
+              >
+                <div
+                  class="css-1ac62sw"
+                >
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
+                  >
+                    <div
+                      class="chakra-skeleton css-cdkrf0"
+                    >
+                      <span
+                        class="chakra-text css-in3yi3"
+                      >
+                        Wind speed: 
+                      </span>
+                       No 80km/h
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1ac62sw"
+                >
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
+                  >
+                    <div
+                      class="chakra-skeleton css-cdkrf0"
+                    >
+                      <span
+                        class="chakra-text css-in3yi3"
+                      >
+                        Humidity: 
+                      </span>
+                       7%
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1ac62sw"
+                >
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
+                  >
+                    <div
+                      class="chakra-skeleton css-cdkrf0"
+                    >
+                      <span
+                        class="chakra-text css-in3yi3"
+                      >
+                        Pressure: 
+                      </span>
+                       25hPA
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1r78p7n"
+      >
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-cdkrf0"
+            >
+              <p
+                class="chakra-text css-4g3ufm"
+              >
+                segunda
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-wbxo62"
+            >
+              <div
+                class="svg-mock"
+              />
+            </div>
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                >
+                  Clear
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  Max: {{max}}
+                </p>
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  Min: {{min}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`weathers render render the component without the weathers data 1`] = `
+<div>
+  <div
+    class="css-57i5ee"
+  >
+    <span
+      class="css-8atqhb"
+    >
+      <div>
+        <div
+          class="css-8atqhb"
+        >
+          <div
+            class="css-1hoatnx"
+          >
+            <div
+              class="chakra-skeleton css-1ph0op8"
+            >
+              <p
+                class="chakra-text css-1vza8hn"
+              >
+                Recife, Pernambuco, Brasil
+              </p>
+            </div>
+            <div
+              class="chakra-skeleton__group css-o7rt0f"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-i2jvxk"
+                >
+                  11:47
+                </p>
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-o7rt0f"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-xj20wo"
+                >
+                  Today {{date}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-1uxcmd3"
+          >
+            <div
+              class="css-9nbp22"
+            >
+              <div
+                class="css-y7eb69"
+              >
+                <div
+                  class="chakra-skeleton__group css-0"
+                >
+                  <div
+                    class="chakra-skeleton css-cdkrf0"
+                  >
+                    <p
+                      class="chakra-text css-0"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-rt6i1c"
+              >
+                <div
+                  class="chakra-skeleton css-19zleqy"
+                />
+                <div
+                  class="chakra-skeleton__group css-g89h0y"
+                >
+                  <div
+                    class="chakra-skeleton css-cdkrf0"
+                  >
+                    <p
+                      class="chakra-text css-187qkfd"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-1mrlgg5"
+              >
+                <div
+                  class="css-1ac62sw"
+                >
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
+                  >
+                    <div
+                      class="chakra-skeleton css-cdkrf0"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-1ac62sw"
+                >
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
+                  >
+                    <div
+                      class="chakra-skeleton css-cdkrf0"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-1ac62sw"
+                >
+                  <div
+                    class="chakra-skeleton__group css-g89h0y"
+                  >
+                    <div
+                      class="chakra-skeleton css-cdkrf0"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1r78p7n"
+      >
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-cdkrf0"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-wbxo62"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-cdkrf0"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-wbxo62"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-cdkrf0"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-wbxo62"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-cdkrf0"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-wbxo62"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-cdkrf0"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-wbxo62"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-cdkrf0"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-wbxo62"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-12j7138"
+        >
+          <div
+            class="chakra-skeleton__group css-1lk7enj"
+          >
+            <div
+              class="chakra-skeleton css-cdkrf0"
+            />
+          </div>
+          <div
+            class="css-1pr5wpq"
+          >
+            <div
+              class="chakra-skeleton css-wbxo62"
+            />
+            <div
+              class="chakra-skeleton__group css-jd4vsm"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-1fub2xe"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-15o3gur"
+          >
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-skeleton__group css-1cq7bov"
+            >
+              <div
+                class="chakra-skeleton css-cdkrf0"
+              >
+                <p
+                  class="chakra-text css-0"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

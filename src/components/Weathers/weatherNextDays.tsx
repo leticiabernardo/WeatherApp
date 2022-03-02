@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text, Skeleton, SkeletonText } from '@chakra-ui/react';
 import { getFullTemperature } from '@/helpers/temperature';
 import { getWeekday } from '@/helpers/weekday';
 import AsyncSvgIcon from '@/components/AsyncSvgIcon';
@@ -7,11 +7,13 @@ import AsyncSvgIcon from '@/components/AsyncSvgIcon';
 type WeatherNextDaysProps = {
   weathers: app.DailyWeathers[];
   temperatureMeasurementUnit: string;
+  isLoading: boolean;
 };
 
 const WeatherNextDays = ({
   weathers,
   temperatureMeasurementUnit,
+  isLoading,
 }: WeatherNextDaysProps) => {
   const { t, i18n } = useTranslation();
 
@@ -21,25 +23,46 @@ const WeatherNextDays = ({
         textShadow="1px 1px 5px rgba(0,0,0,0.3)"
         fontSize="sm"
         textAlign="center"
+        minWidth="80%"
       >
-        <Text>
-          {t('Max: {{max}}', {
-            max: getFullTemperature(
-              temperatures.max,
-              temperatureMeasurementUnit
-            ),
-            interpolation: { escapeValue: false },
-          })}
-        </Text>
-        <Text>
-          {t('Min: {{min}}', {
-            min: getFullTemperature(
-              temperatures.min,
-              temperatureMeasurementUnit
-            ),
-            interpolation: { escapeValue: false },
-          })}
-        </Text>
+        <SkeletonText
+          isLoaded={!isLoading}
+          mt="1"
+          noOfLines={1}
+          spacing="4"
+          skeletonHeight="21px"
+          minWidth="80%"
+        >
+          <Text>
+            {temperatures.max &&
+              t('Max: {{max}}', {
+                max: getFullTemperature(
+                  temperatures.max,
+                  temperatureMeasurementUnit
+                ),
+                interpolation: { escapeValue: false },
+              })}
+          </Text>
+        </SkeletonText>
+        <SkeletonText
+          isLoaded={!isLoading}
+          mt="1"
+          noOfLines={1}
+          spacing="4"
+          skeletonHeight="21px"
+          minWidth="80%"
+        >
+          <Text>
+            {temperatures.min &&
+              t('Min: {{min}}', {
+                min: getFullTemperature(
+                  temperatures.min,
+                  temperatureMeasurementUnit
+                ),
+                interpolation: { escapeValue: false },
+              })}
+          </Text>
+        </SkeletonText>
       </Box>
     );
   };
@@ -52,28 +75,51 @@ const WeatherNextDays = ({
         display="flex"
         flexDirection="column"
         alignItems="center"
-        key={weather.date}
+        textAlign="center"
+        key={weather?.key}
       >
-        <Text
-          fontWeight="bold"
-          textShadow="1px 1px 5px rgba(0,0,0,0.3)"
-          textTransform="capitalize"
+        <SkeletonText
+          isLoaded={!isLoading}
+          noOfLines={1}
+          spacing="4"
+          skeletonHeight="24px"
+          minWidth="100%"
         >
-          {getWeekday(weather.date * 1000, i18n.language)}
-        </Text>
-
+          {weather?.date && (
+            <Text
+              fontWeight="bold"
+              textShadow="1px 1px 5px rgba(0,0,0,0.3)"
+              textTransform="capitalize"
+            >
+              {getWeekday(weather.date * 1000, i18n.language)}
+            </Text>
+          )}
+        </SkeletonText>
         <Box
           margin="15px 0"
           display="flex"
           flexDirection="column"
           alignItems="center"
+          width="100%"
         >
-          <AsyncSvgIcon
-            svg={`weather-${weather.weather.toLocaleLowerCase()}`}
-          />
-          <Text marginTop="8px" textShadow="1px 1px 5px rgba(0,0,0,0.3)">
-            {weather && t(weather.weather)}
-          </Text>
+          <Skeleton isLoaded={!isLoading} height="40px" width="40px">
+            {weather?.weather && (
+              <AsyncSvgIcon
+                svg={`weather-${weather.weather.toLocaleLowerCase()}`}
+              />
+            )}
+          </Skeleton>
+          <SkeletonText
+            isLoaded={!isLoading}
+            noOfLines={1}
+            spacing="2"
+            skeletonHeight="24px"
+            minWidth="50%"
+          >
+            <Text marginTop="8px" textShadow="1px 1px 5px rgba(0,0,0,0.3)">
+              {weather && t(weather.weather)}
+            </Text>
+          </SkeletonText>
         </Box>
         {mountTemperatures(weather.temp)}
       </Box>

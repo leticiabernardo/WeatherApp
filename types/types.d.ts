@@ -36,8 +36,8 @@ declare module app {
   }
 
   export interface Temperature {
-    min: number;
-    max: number;
+    min?: number;
+    max?: number;
   }
 
   type MeasurementUnit = 'celsius' | 'fahrenheit';
@@ -71,6 +71,7 @@ declare module app {
   }
 
   export interface DailyWeathers {
+    key?: string;
     date: number;
     pressure?: number;
     humidity?: number;
@@ -118,6 +119,11 @@ declare module app {
 
   export interface Background {
     background?: string;
+  }
+
+  export interface Loader {
+    all: boolean;
+    geocode: boolean;
   }
 }
 

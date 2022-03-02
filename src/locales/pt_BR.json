@@ -23,5 +23,6 @@
     "Tornado": "Tornado",
     "Min: {{min}}": "Min: {{min}}",
     "Max: {{max}}": "Máx: {{max}}",
-    "Click here to use your current location": "Clique aqui para usar sua localização atual"
+    "Click here to use your current location": "Clique aqui para usar sua localização atual",
+    "Loading...": "Carregando..."
 }
