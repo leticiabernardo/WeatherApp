@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import { getWeatherLocation } from '@/helpers/weather';
 import DefaultContent from '@/components/DefaultContent';
 import DefaultWrapper from '@/components/DefaultWrapper';
+import ErrorContent from '@/components/ErrorContent';
 import Header from '@/components/Header';
 import Weathers from '@/components/Weathers';
 import { getGeoCode, getBackground, getWeathers } from './clientService';
@@ -22,11 +23,13 @@ const Main = () => {
     geocode: false,
   });
   const [prevSearch, setPrevSearch] = useState('');
+  const [isError, setIsError] = useState<boolean>(false);
 
   const {
     data: geocodesResponse,
     isFetching: isFetchingGeocode,
     isLoading: isLoadingGeocode,
+    isError: isErrorGeocode,
   } = useQuery(
     ['geocode', { language: i18n.language, search }],
     () => getGeoCode(search, i18n.language),
@@ -52,7 +55,11 @@ const Main = () => {
     ? getWeatherLocation(geocodeComponents)
     : '';
 
-  const { data: weathersResponse, isLoading: isLoadingWeathers } = useQuery(
+  const {
+    data: weathersResponse,
+    isLoading: isLoadingWeathers,
+    isError: isErrorWeathers,
+  } = useQuery(
     ['weathers', search, geocodeGeometry?.lat, geocodeGeometry?.lng],
     () =>
       getWeathers(geocodeGeometry?.lat, geocodeGeometry?.lng, i18n.language),
@@ -69,7 +76,6 @@ const Main = () => {
       enabled: !!weatherLocation,
       refetchOnWindowFocus: false,
       staleTime: 60 * 5000,
-      keepPreviousData: true,
     }
   );
 
@@ -78,6 +84,20 @@ const Main = () => {
       setBackground(bgResponse.data.background);
     }
   }, [bgResponse]);
+
+  useEffect(() => {
+    if (
+      geocodesResponse?.data?.total_results === 0 ||
+      isErrorGeocode ||
+      isErrorWeathers
+    ) {
+      setIsError(true);
+      setBackground(undefined);
+      setWeathers(undefined);
+      return;
+    }
+    setIsError(false);
+  }, [geocodesResponse, isErrorGeocode, isErrorWeathers, setBackground]);
 
   useEffect(() => {
     if (prevSearch === search && isFetchingGeocode) {
@@ -110,6 +130,9 @@ const Main = () => {
   );
 
   const renderContent = () => {
+    if (isError) {
+      return <ErrorContent />;
+    }
     if (weathers || loading.all || loading.geocode) {
       return (
         <Weathers

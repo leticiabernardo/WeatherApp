@@ -25,5 +25,6 @@
     "Max: {{max}}": "Max: {{max}}",
     "Click here to use your current location": "Click here to use your current location",
     "Loading...": "Loading...",
-    "Searching for your geolocation...": "Searching for your geolocation..."
+    "Searching for your geolocation...": "Searching for your geolocation...",
+    "Your search could not be completed...": "Your search could not be completed..."
 }
