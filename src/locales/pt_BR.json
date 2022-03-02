@@ -24,5 +24,6 @@
     "Min: {{min}}": "Min: {{min}}",
     "Max: {{max}}": "Máx: {{max}}",
     "Click here to use your current location": "Clique aqui para usar sua localização atual",
-    "Loading...": "Carregando..."
+    "Loading...": "Carregando...",
+    "Searching for your geolocation...": "Buscando sua geolocalização..."
 }

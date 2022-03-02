@@ -29,8 +29,15 @@ const Search = ({ setSearch }: SearchProps): JSX.Element => {
   };
 
   const handleGeolocationClick = () => {
+    toast({
+      title: t('Searching for your geolocation...'),
+      status: 'info',
+    });
     if (!('geolocation' in navigator)) {
-      toast({ title: t('Geolocation is not supported by your browser') });
+      toast({
+        title: t('Geolocation is not supported by your browser'),
+        status: 'error',
+      });
       return;
     }
     navigator.geolocation.getCurrentPosition(function (position): void {
