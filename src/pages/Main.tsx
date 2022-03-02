@@ -1,7 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
-import { createStandaloneToast } from '@chakra-ui/react';
 import { getWeatherLocation } from '@/helpers/weather';
 import DefaultContent from '@/components/DefaultContent';
 import DefaultWrapper from '@/components/DefaultWrapper';
@@ -17,7 +16,6 @@ const Main = () => {
   const [search, setSearch] = useState('');
   const [temperatureMeasurementUnit, setTemperatureMeasurementUnit] =
     useState<app.MeasurementUnit>('celsius');
-  const [error, setError] = useState<string | undefined>(undefined);
   const [background, setBackground] = useState<string | undefined>(undefined);
   const [loading, setLoading] = useState<app.Loader>({
     all: false,
@@ -76,21 +74,6 @@ const Main = () => {
   );
 
   useEffect(() => {
-    const toast = createStandaloneToast();
-    if (error) {
-      toast({
-        title: error,
-        status: 'error',
-        duration: 9000,
-        isClosable: true,
-        onCloseComplete: () => {
-          setError(undefined);
-        },
-      });
-    }
-  }, [error, setError]);
-
-  useEffect(() => {
     if (bgResponse) {
       setBackground(bgResponse.data.background);
     }
@@ -146,7 +129,6 @@ const Main = () => {
         setSearch={setSearch}
         temperatureMeasurementUnit={temperatureMeasurementUnit}
         setTemperatureMeasurementUnit={setTemperatureMeasurementUnit}
-        setError={setError}
       />
       {renderContent()}
     </DefaultWrapper>

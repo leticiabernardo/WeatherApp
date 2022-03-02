@@ -7,14 +7,12 @@ type HeaderProps = {
   setSearch: (val: string) => void;
   temperatureMeasurementUnit: app.MeasurementUnit;
   setTemperatureMeasurementUnit: (metric: app.MeasurementUnit) => void;
-  setError: (error: string) => void;
 };
 
 const Header = ({
   setSearch,
   temperatureMeasurementUnit,
   setTemperatureMeasurementUnit,
-  setError,
 }: HeaderProps) => {
   return (
     <Box
@@ -37,7 +35,7 @@ const Header = ({
           />
           <LanguageSwitcher />
         </Box>
-        <Search setSearch={setSearch} setError={setError} />
+        <Search setSearch={setSearch} />
       </Box>
     </Box>
   );

@@ -11,15 +11,16 @@ import {
 import { ReactComponent as IconSearch } from '@/assets/images/icon-search.svg';
 import { ReactComponent as IconGeolocation } from '@/assets/images/icon-map.svg';
 import { sanitizeString } from '@/helpers/strings';
+import { useCustomToast } from '@/hooks/customToast';
 
 interface SearchProps {
   setSearch: (search: string) => void;
-  setError: (e: string) => void;
 }
 
-const Search = ({ setSearch, setError }: SearchProps): JSX.Element => {
+const Search = ({ setSearch }: SearchProps): JSX.Element => {
   const { t } = useTranslation();
   const [searchValue, setSearchValue] = useState('');
+  const toast = useCustomToast();
 
   const handleSearchClick = () => {
     const place = sanitizeString(searchValue);
@@ -29,7 +30,7 @@ const Search = ({ setSearch, setError }: SearchProps): JSX.Element => {
 
   const handleGeolocationClick = () => {
     if (!('geolocation' in navigator)) {
-      setError(t('Geolocation is not supported by your browser'));
+      toast({ title: t('Geolocation is not supported by your browser') });
       return;
     }
     navigator.geolocation.getCurrentPosition(function (position): void {
