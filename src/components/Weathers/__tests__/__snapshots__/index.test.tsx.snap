@@ -19,7 +19,7 @@ exports[`weathers render render the component loading all data 1`] = `
               class="chakra-skeleton css-trbgv7"
             >
               <p
-                class="chakra-text css-1vza8hn"
+                class="chakra-text css-9q02qh"
               >
                 Recife, Pernambuco, Brasil
               </p>
@@ -67,10 +67,10 @@ exports[`weathers render render the component loading all data 1`] = `
             class="css-1uxcmd3"
           >
             <div
-              class="css-9nbp22"
+              class="css-wkvn6u"
             >
               <div
-                class="css-y7eb69"
+                class="css-kneip1"
               >
                 <div
                   class="chakra-skeleton__group css-0"
@@ -91,7 +91,7 @@ exports[`weathers render render the component loading all data 1`] = `
                 </div>
               </div>
               <div
-                class="css-rt6i1c"
+                class="css-1eekk9a"
               >
                 <div
                   class="chakra-skeleton css-1bqbi46"
@@ -115,7 +115,7 @@ exports[`weathers render render the component loading all data 1`] = `
                 </div>
               </div>
               <div
-                class="css-1mrlgg5"
+                class="css-1i20ck1"
               >
                 <div
                   class="css-1ac62sw"
@@ -174,10 +174,10 @@ exports[`weathers render render the component loading all data 1`] = `
         </div>
       </div>
       <div
-        class="css-1r78p7n"
+        class="css-axugeh"
       >
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -256,7 +256,7 @@ exports[`weathers render render the component loading all data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -335,7 +335,7 @@ exports[`weathers render render the component loading all data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -414,7 +414,7 @@ exports[`weathers render render the component loading all data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -493,7 +493,7 @@ exports[`weathers render render the component loading all data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -572,7 +572,7 @@ exports[`weathers render render the component loading all data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -651,7 +651,7 @@ exports[`weathers render render the component loading all data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -754,7 +754,7 @@ exports[`weathers render render the component loading the geocode data 1`] = `
               class="chakra-skeleton css-trbgv7"
             >
               <p
-                class="chakra-text css-1vza8hn"
+                class="chakra-text css-9q02qh"
               >
                 Recife, Pernambuco, Brasil
               </p>
@@ -790,10 +790,10 @@ exports[`weathers render render the component loading the geocode data 1`] = `
             class="css-1uxcmd3"
           >
             <div
-              class="css-9nbp22"
+              class="css-wkvn6u"
             >
               <div
-                class="css-y7eb69"
+                class="css-kneip1"
               >
                 <div
                   class="chakra-skeleton__group css-0"
@@ -810,7 +810,7 @@ exports[`weathers render render the component loading the geocode data 1`] = `
                 </div>
               </div>
               <div
-                class="css-rt6i1c"
+                class="css-1eekk9a"
               >
                 <div
                   class="chakra-skeleton css-19zleqy"
@@ -834,7 +834,7 @@ exports[`weathers render render the component loading the geocode data 1`] = `
                 </div>
               </div>
               <div
-                class="css-1mrlgg5"
+                class="css-1i20ck1"
               >
                 <div
                   class="css-1ac62sw"
@@ -896,10 +896,10 @@ exports[`weathers render render the component loading the geocode data 1`] = `
         </div>
       </div>
       <div
-        class="css-1r78p7n"
+        class="css-axugeh"
       >
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -994,7 +994,7 @@ exports[`weathers render render the component with the weathers data 1`] = `
               class="chakra-skeleton css-1ph0op8"
             >
               <p
-                class="chakra-text css-1vza8hn"
+                class="chakra-text css-9q02qh"
               >
                 Recife, Pernambuco, Brasil
               </p>
@@ -1030,10 +1030,10 @@ exports[`weathers render render the component with the weathers data 1`] = `
             class="css-1uxcmd3"
           >
             <div
-              class="css-9nbp22"
+              class="css-wkvn6u"
             >
               <div
-                class="css-y7eb69"
+                class="css-kneip1"
               >
                 <div
                   class="chakra-skeleton__group css-0"
@@ -1050,7 +1050,7 @@ exports[`weathers render render the component with the weathers data 1`] = `
                 </div>
               </div>
               <div
-                class="css-rt6i1c"
+                class="css-1eekk9a"
               >
                 <div
                   class="chakra-skeleton css-19zleqy"
@@ -1074,7 +1074,7 @@ exports[`weathers render render the component with the weathers data 1`] = `
                 </div>
               </div>
               <div
-                class="css-1mrlgg5"
+                class="css-1i20ck1"
               >
                 <div
                   class="css-1ac62sw"
@@ -1136,10 +1136,10 @@ exports[`weathers render render the component with the weathers data 1`] = `
         </div>
       </div>
       <div
-        class="css-1r78p7n"
+        class="css-axugeh"
       >
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -1234,7 +1234,7 @@ exports[`weathers render render the component without the weathers data 1`] = `
               class="chakra-skeleton css-1ph0op8"
             >
               <p
-                class="chakra-text css-1vza8hn"
+                class="chakra-text css-9q02qh"
               >
                 Recife, Pernambuco, Brasil
               </p>
@@ -1270,10 +1270,10 @@ exports[`weathers render render the component without the weathers data 1`] = `
             class="css-1uxcmd3"
           >
             <div
-              class="css-9nbp22"
+              class="css-wkvn6u"
             >
               <div
-                class="css-y7eb69"
+                class="css-kneip1"
               >
                 <div
                   class="chakra-skeleton__group css-0"
@@ -1288,7 +1288,7 @@ exports[`weathers render render the component without the weathers data 1`] = `
                 </div>
               </div>
               <div
-                class="css-rt6i1c"
+                class="css-1eekk9a"
               >
                 <div
                   class="chakra-skeleton css-19zleqy"
@@ -1306,7 +1306,7 @@ exports[`weathers render render the component without the weathers data 1`] = `
                 </div>
               </div>
               <div
-                class="css-1mrlgg5"
+                class="css-1i20ck1"
               >
                 <div
                   class="css-1ac62sw"
@@ -1347,10 +1347,10 @@ exports[`weathers render render the component without the weathers data 1`] = `
         </div>
       </div>
       <div
-        class="css-1r78p7n"
+        class="css-axugeh"
       >
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -1405,7 +1405,7 @@ exports[`weathers render render the component without the weathers data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -1460,7 +1460,7 @@ exports[`weathers render render the component without the weathers data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -1515,7 +1515,7 @@ exports[`weathers render render the component without the weathers data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -1570,7 +1570,7 @@ exports[`weathers render render the component without the weathers data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -1625,7 +1625,7 @@ exports[`weathers render render the component without the weathers data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"
@@ -1680,7 +1680,7 @@ exports[`weathers render render the component without the weathers data 1`] = `
           </div>
         </div>
         <div
-          class="css-12j7138"
+          class="css-1ok9xdz"
         >
           <div
             class="chakra-skeleton__group css-1lk7enj"

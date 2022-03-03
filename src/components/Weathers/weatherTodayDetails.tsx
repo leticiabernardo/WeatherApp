@@ -13,18 +13,23 @@ const WeatherTodayDetails = (props: {
 
   return (
     <Box
-      margin={{ base: '60px auto', sm: '10px auto', lg: '60px auto' }}
+      margin={{
+        base: '30px auto',
+        sm: '10px auto',
+        md: '30px auto',
+        lg: '60px auto',
+      }}
       display="grid"
       gridTemplateColumns={{
-        base: '1fr 1fr 1fr',
+        base: '1fr',
         sm: '1fr',
-        lg: '1fr 1fr 1fr',
+        md: '1fr 1fr 1fr',
       }}
       width="100%"
       alignItems="center"
     >
       <Box
-        fontSize={{ base: '8xl', sm: '5xl', md: '7xl', lg: '8xl' }}
+        fontSize={{ base: '6xl', lg: '8xl' }}
         color="white"
         fontFamily="Open Sans"
         lineHeight="90px"
@@ -42,7 +47,7 @@ const WeatherTodayDetails = (props: {
           </Text>
         </SkeletonText>
       </Box>
-      <Box textAlign="center" margin="0 auto">
+      <Box textAlign="center" margin={{ base: '20px auto 20px', md: '0 auto' }}>
         <Skeleton isLoaded={!isLoading} height="70px" minWidth="70px">
           {weather && (
             <AsyncSvgIcon
@@ -69,7 +74,7 @@ const WeatherTodayDetails = (props: {
           </Text>
         </SkeletonText>
       </Box>
-      <Box color="white" textAlign={{ base: 'left', sm: 'center', lg: 'left' }}>
+      <Box color="white" textAlign={{ base: 'center', md: 'left' }}>
         <Box textShadow="1px 1px 5px rgba(0,0,0,0.3)">
           <SkeletonText
             isLoaded={!isLoading}

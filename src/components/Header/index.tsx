@@ -16,12 +16,12 @@ const Header = ({
 }: HeaderProps) => {
   return (
     <Box
-      display="flex"
+      display={{ base: 'block', sm: 'flex' }}
       alignItems="start"
       justifyContent="space-between"
       padding="10px 0 30px"
     >
-      <Box margin="20px 0">
+      <Box margin="20px 0" textAlign={{ base: 'center', sm: 'left' }}>
         <Link fontWeight="bold" color="white" fontSize="0.9em" href="./">
           weather.app
         </Link>

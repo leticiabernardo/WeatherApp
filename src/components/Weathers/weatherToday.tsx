@@ -24,10 +24,10 @@ const WeatherToday = (props: {
         >
           <Skeleton isLoaded={!loading.geocode} minHeight="90px">
             <Text
-              fontSize="7xl"
+              fontSize={{ base: '50px', lg: '7xl' }}
               color="white"
               fontFamily="Open Sans"
-              lineHeight="90px"
+              lineHeight={{ base: '50px', lg: '90px' }}
               textShadow="1px 1px 5px rgba(0,0,0,0.3)"
             >
               {currentLocation}

@@ -70,7 +70,7 @@ const WeatherNextDays = ({
   const mountWeatherDay = (weather: app.DailyWeathers): JSX.Element => {
     return (
       <Box
-        margin="5px 0"
+        marginTop={{ base: '25px', lg: '5px' }}
         padding="0 25px"
         display="flex"
         flexDirection="column"
@@ -130,8 +130,8 @@ const WeatherNextDays = ({
     <Box
       display="grid"
       gridTemplateColumns={{
-        base: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
-        sm: '1fr 1fr 1fr 1fr',
+        base: '1fr 1fr 1fr',
+        md: '1fr 1fr 1fr 1fr',
         lg: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
       }}
       color="white"

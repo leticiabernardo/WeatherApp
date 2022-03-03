@@ -16,6 +16,7 @@ const DefaultContent = () => {
       margin="30px 0"
       background="#222"
       borderRadius="20px"
+      padding={{ base: '60px 0', lg: '0px' }}
     >
       <Box>
         <img src={LocationGif} width="140" alt="" />

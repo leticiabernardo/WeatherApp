@@ -33,12 +33,14 @@ const DefaultWrapper = ({ children, backgroundImage }: WrapperProps) => {
         display: 'block',
         content: '""',
       }}
+      display={{ base: 'inline-table', lg: 'block' }}
+      padding="0px"
     >
       <Container
         maxW="1100px"
         mx="auto"
         width="100%"
-        height="100%"
+        height={{ base: 'auto', lg: '100%' }}
         zIndex="100"
         position="relative"
       >
