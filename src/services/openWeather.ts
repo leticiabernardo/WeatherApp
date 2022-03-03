@@ -1,6 +1,7 @@
 import axios from 'axios';
 import 'dotenv/config';
 import { Request, Response } from 'express';
+import { mapLanguage } from '../helpers/language';
 import { transformWeathers } from './transforms/weathers';
 
 export const getWeathers = (req: Request, res: Response) => {
@@ -11,7 +12,7 @@ export const getWeathers = (req: Request, res: Response) => {
     appid: process.env.OPENWEATHER_KEY,
     exclude: 'minutely,hourly',
     units: 'metric',
-    lang,
+    lang: mapLanguage(lang as string),
   };
   return axios
     .get<app.WeatherOneCallResponse>(

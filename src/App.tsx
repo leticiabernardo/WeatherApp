@@ -3,7 +3,6 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import Main from '@/pages/Main';
 import '@fontsource/montserrat/700.css';
 import '@fontsource/open-sans/400.css';
-import './i18n';
 
 const theme = extendTheme({
   styles: {

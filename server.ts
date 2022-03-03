@@ -2,17 +2,32 @@
 // TODO: rearrange the file, split api routes and server file, fix eslint warnings
 import fs from 'fs';
 import express, { Express, RequestHandler } from 'express';
-import { createServer as createViteServer } from 'vite';
+import { createServer as createViteServer, ViteDevServer } from 'vite';
 import serveStatic from 'serve-static';
 import compression from 'compression';
 import { ServerResponse } from 'http';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
+import { handle, LanguageDetector } from 'i18next-http-middleware';
+import i18next from 'i18next';
 import api from './src/api';
+import en from './src/locales/en.json';
+import ptBR from './src/locales/pt_BR.json';
+
+export const defaultNS = 'translations';
+export const resources = {
+  'en-US': {
+    translations: en,
+  },
+  'pt-BR': {
+    translations: ptBR,
+  },
+} as const;
 
 const filename = require('url')
   .pathToFileURL(__filename)
   .toString() as unknown as string;
+
 const fileNameDIR = dirname(fileURLToPath(filename));
 
 const isTest = process.env.NODE_ENV === 'test' || !!process.env.VITE_TEST_BUILD;
@@ -27,11 +42,24 @@ const createServer = async (
     ? fs.readFileSync(localResolve('./client/index.html'), 'utf-8')
     : '';
 
+  const lngDetector = new LanguageDetector({
+    caches: false,
+  });
+  // eslint-disable-next-line @typescript-eslint/no-floating-promises
+  i18next.use(lngDetector).init({
+    fallbackLng: 'en-US',
+    ns: ['translations'],
+    defaultNS,
+    resources,
+  });
+
   const app: Express = express();
   app.use(express.json() as RequestHandler);
   app.use(express.urlencoded({ extended: true }) as RequestHandler);
 
-  let vite: any;
+  app.use(handle(i18next, {}));
+
+  let vite: ViteDevServer | undefined;
 
   if (!isProd) {
     vite = await createViteServer({
@@ -60,8 +88,9 @@ const createServer = async (
 
   app.use('/api', api);
 
-  app.use('*', async ({ originalUrl }, res) => {
+  app.use('*', async (req, res) => {
     try {
+      const { originalUrl } = req;
       const url = originalUrl;
 
       let template;
@@ -77,7 +106,7 @@ const createServer = async (
         render = entryServer.render;
       }
 
-      const appHtml = render(url);
+      const appHtml = render(url, req);
 
       const html = template.replace(`<!--app-html-->`, appHtml);
 

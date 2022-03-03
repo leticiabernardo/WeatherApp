@@ -16,20 +16,20 @@ const LanguageSwitcher = () => {
     <Box as="span" padding="0 4px 4px" color="#a9a9a9">
       <Button
         variant="link"
-        color={i18n.language === 'en_US' ? 'white' : '#999'}
+        color={i18n.language === 'en-US' ? 'white' : '#999'}
         _hover={{ color: '#ccc' }}
         _focus={{ outline: 'none' }}
-        onClick={() => handleChangeLanguage('en_US')}
+        onClick={() => handleChangeLanguage('en-US')}
       >
         EN
       </Button>
       |
       <Button
         variant="link"
-        color={i18n.language === 'pt_BR' ? 'white' : '#999'}
+        color={i18n.language === 'pt-BR' ? 'white' : '#999'}
         _hover={{ color: '#ccc' }}
         _focus={{ outline: 'none' }}
-        onClick={() => handleChangeLanguage('pt_BR')}
+        onClick={() => handleChangeLanguage('pt-BR')}
       >
         PT
       </Button>

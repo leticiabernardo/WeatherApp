@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
@@ -37,7 +38,7 @@ const Main = () => {
       enabled: search !== '',
       refetchOnWindowFocus: false,
       staleTime: Infinity,
-      keepPreviousData: i18n.language === 'pt_BR',
+      keepPreviousData: i18n.language === 'pt-BR',
     }
   );
 

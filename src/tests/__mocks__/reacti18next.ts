@@ -6,7 +6,7 @@ reactI18Next.useTranslation = () => {
     t: (str: string) => str,
     i18n: {
       changeLanguage: () => new Promise(() => {}),
-      language: 'pt_BR',
+      language: 'pt-BR',
     },
   };
 };

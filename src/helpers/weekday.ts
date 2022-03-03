@@ -1,10 +1,5 @@
-const intl: { [key: string]: string } = {
-  pt_BR: 'pt-BR',
-  en_US: 'en-US',
-};
-
 function getWeekday(dt: number, lang: string) {
-  return new Intl.DateTimeFormat(intl[lang], {
+  return new Intl.DateTimeFormat(lang, {
     weekday: 'long',
   })
     .format(dt)
@@ -12,7 +7,7 @@ function getWeekday(dt: number, lang: string) {
 }
 
 function getDate(dt: number | Date, lang: string) {
-  return new Intl.DateTimeFormat(intl[lang]).format(dt);
+  return new Intl.DateTimeFormat(lang).format(dt);
 }
 
 export { getWeekday, getDate };
