@@ -15,7 +15,9 @@ const DefaultWrapper = ({ children, backgroundImage }: WrapperProps) => {
       maxW="100%"
       width="100%"
       height="100%"
-      backgroundImage={backgroundImage ? `url(${backgroundImage})` : undefined}
+      backgroundImage={
+        backgroundImage ? `url("${backgroundImage}")` : undefined
+      }
       backdropFilter="contrast(80%)"
       backgroundSize="cover"
       backgroundPosition="center"

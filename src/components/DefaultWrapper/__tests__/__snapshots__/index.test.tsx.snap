@@ -19,7 +19,7 @@ exports[`default wrapper render render the component 1`] = `
 exports[`default wrapper render should contain the css with background image 1`] = `
 <div>
   <div
-    class="chakra-container css-1v6mmd1"
+    class="chakra-container css-1uc0zqs"
   >
     <div
       class="chakra-container css-1vggzwa"
