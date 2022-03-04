@@ -59,7 +59,7 @@ const createServer = async (
 
   app.use(handle(i18next, {}));
 
-  let vite: ViteDevServer | undefined;
+  let vite: ViteDevServer | any | undefined;
 
   if (!isProd) {
     vite = await createViteServer({
