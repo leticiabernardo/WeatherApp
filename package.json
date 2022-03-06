@@ -10,7 +10,7 @@
     "build": "tsc -p tsconfig.prod.json && yarn build:client && yarn build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
-    "serve": "yarn build && cross-env NODE_ENV=production node --experimental-modules dist/server.js",
+    "start": "cross-env NODE_ENV=production node --experimental-modules dist/server.js",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "test": "jest --config=./jest.config.js -u --verbose",
     "coverage": "jest --coverage"
