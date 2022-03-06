@@ -1,3 +1,4 @@
+<!-- README.md template: https://github.com/othneildrew/Best-README-Template -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -31,9 +32,16 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#getting-the-api-keys">Getting the API Keys</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#getting-the-api-keys">Getting the api keys</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
     <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
@@ -56,51 +64,82 @@ Features:
 
 ## Getting Started
 
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+  
+ * yarn
+  ```sh
+  npm install --global yarn
+  ```
+
+### Getting the api keys
+
+Access the links below and generate the api keys to insert into the project.
+
+- [Open Weather Map](https://openweathermap.org/)
+- [Open Cage Data](https://opencagedata.com/)
+- [Bing](https://www.microsoft.com/en-us/bing/apis/pricing)
+
+### Installation
+
 1 - Clone the repo
-```
+```sh
 git clone https://github.com/leticiabernardo/WeatherApp.git
 ```
 Enter the project folder
-```
+```sh
 cd WeatherApp
 ```
 
 2 - Install packages
-```
+```sh
 yarn install
 ```
 
 3 - Setting your api keys
 
 Rename the file `.env.sample` to `.env`
-```
+```js
 OPENWEATHER_KEY="ENTER YOUR API"
 OPENCAGE_KEY="ENTER YOUR API"
 BING_KEY="ENTER YOUR API"
 ```
 
 4 - Run the application in a development environment
-```
+```sh
 yarn dev:server
 ```
 
 5 - Run the tests
-```
+```sh
 yarn test | coverage
 ```
-
-## Getting the API Keys
-
-Get the api keys:
-- [Open Weather Map](https://openweathermap.org/)
-- [Open Cage Data](https://opencagedata.com/)
-- [Bing](https://www.microsoft.com/en-us/bing/apis/pricing)
 
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+
+<!-- CONTACT -->
+## Contact
+
+Letícia Bernardo - [@letisgobabe](https://twitter.com/letisgobabe)
+
+[Check out the demo project](https://leb-weather-app.herokuapp.com/)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -117,3 +156,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [license-url]: https://github.com/leticiabernardo/WeatherApp/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/lebernardo
+
