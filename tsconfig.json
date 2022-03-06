@@ -19,12 +19,13 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "target": "ES2020",
-    "types": ["vite-plugin-svgr/client"],
+    "types": ["vite-plugin-svgr/client", "node"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
     "resolveJsonModule": true
   },
-  "include": ["src/**/*", "types/*", "*"]
+  "include": ["src/**/*", "types/*", "*"],
+  "exclude": ["**/*/__tests__/**/*", "**/*/tests/**/*"]
 }
